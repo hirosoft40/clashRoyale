@@ -14,7 +14,7 @@ router.get('/buildings/?/?',(req, res)=>{
         <div style="margin:10px;">
             <img src = '/imgs/${ele.Artwork}'>
             <h3><a href='/cards/${count}'>${ele.Name.toUpperCase()}</a></h3>
-            <p>Type: ${ele.Type}</p>
+            <p>Type: <a href='/buildings/'>${ele.Type}</a></p>
             <p>Elixir Cost: ${ele.ElixirCost}</p>
             <p>Rarity: ${ele.Rarity}</p>
             <p>Arena: ${ele.Arena}</p>

@@ -6,6 +6,7 @@ app.use(require('./routes/index'));
 app.use(require('./routes/cards'));
 app.use(require('./routes/buildings'));
 app.use(require('./routes/spells'));
+app.use(require('./routes/troops'));
 
 
 app.listen(3000,()=>{

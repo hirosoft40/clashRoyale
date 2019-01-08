@@ -7,13 +7,12 @@ router.get('/cards',(req, res)=>{
     let html = '';
     var count = 0;
     data.cards.forEach(ele => {
-        if(ele.Type === 'Troop'){
             // make clickable with name and #
         html += `
         <div style="margin:10px;">
             <img src = '/imgs/${ele.Artwork}'>
             <h3><a href='/cards/${count}'>${ele.Name.toUpperCase()}</a></h3>
-            <p>Type: ${ele.Type}</p>
+            <p>Type: <a href='/${ele.Type.toLowerCase()}?/?'>${ele.Type}</a></p>
             <p>Elixir Cost: ${ele.ElixirCost}</p>
             <p>Rarity: ${ele.Rarity}</p>
             <p>Arena: ${ele.Arena}</p>
@@ -21,7 +20,6 @@ router.get('/cards',(req, res)=>{
             <hr>
         </div>
         `
-        }
         count++;
     });
     res.send(`<h1 style="text-align:center; margin:20px;">ALL CARDS</h1><ul style='list-style-type: none;'>${html}</ul>`)
