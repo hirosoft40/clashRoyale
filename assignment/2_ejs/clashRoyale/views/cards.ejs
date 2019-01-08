@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head><% include partials/head.ejs %></head>
+    <body>
+        <% include partials/header.ejs %>
+        <div class = 'row'>
+            <div class ='col-6 m-1'></div>
+                <img src = '/imgs/cards/<${ele.Artwork}>'>
+            <div class="col-6"></div>
+                <h3><a href='/cards/${count}'>${ele.Name.toUpperCase()}</a></h3>
+                <p>Type: <a href='/${ele.Type.toLowerCase()}?/?'>${ele.Type}</a></p>
+                <p>Elixir Cost: ${ele.ElixirCost}</p>
+                <p>Rarity: ${ele.Rarity}</p>
+                <p>Arena: ${ele.Arena}</p>
+                <p style="width:500px">${ele.Summary}</p>
+                <hr>
+            </div>
+        </div>
+        <% include partials/footer.ejs %>
+    </body>
+</html>
