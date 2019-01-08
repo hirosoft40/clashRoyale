@@ -15,8 +15,8 @@ router.get('/',(req, res)=>{
 
         <h4>
             <ul style="margin-left:60px; line-height:1.5rem">
-                <li>If you would like to see all cards, simply type in <code>/cards</code>. </li>
-                <li>You can refer to each cards by typing in <code>/cards/[number]</code> or <code>/cards/[name such as archers] </code></li>
+                <li>If you would like to see all cards, simply type in <code><a href='/cards/'>/cards</a></code>. </li>
+                <li>You can refer to each cards by typing in <code><a href='/cards/'>/cards</a>/[number]</code> or <code><a href='/cards/'>/cards</a>/[name such as archers] </code></li>
                 <li><code><a href='/troops/'>/troops</a></code> will show all troop cards.</li>
                 <li><code><a href='/spells/'>/spells</a></code> will show all spell card.</li>
                 <li><code><a href='/buildings/'>/buildings</a></code> will show all buildings cards. </li>
