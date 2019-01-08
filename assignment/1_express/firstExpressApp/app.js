@@ -1,11 +1,9 @@
 const express = require('express');
 var app = express();
 app.use(express.static('public'));
-
+app.use(express.static('./routes/index'))
 // #1  print hello world
-app.get('/', (req, res)=>{
-    res.send('Hello World!')
-});
+
 // "Meow" at the URL /cats
 // "Woof" at the URL /dogs
 // "Living together" at the URL /cats_and_dogs
