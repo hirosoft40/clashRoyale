@@ -14,6 +14,12 @@ h1{
 .types {
     background-image: url('/imgs/bg_imgs/bg_blue.png');
 }
+.rarity {
+    background-image: url('/imgs/bg_imgs/bg_red.png');
+}
+.arena {
+    background-image: url('/imgs/bg_imgs/bg_green.png');
+}
 .text{
     font-family: 'Lato', sans-serif;
     color:#fff

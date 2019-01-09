@@ -19,6 +19,7 @@ router.get('/rarity/:rarityID/',(req, res)=>{
     res.render('types',{
         pageTitle:'Clash Royale Community',
         cards: newData,
+        bodyClass:"rarity",
         Type: uniqueType,
         Rarity: uniqueRarity,
         Arena: uniqueArena,

@@ -20,12 +20,13 @@ router.get('/types/:typeID/',(req, res)=>{
         pageTitle:'Clash Royale Community',
         cards: newData,
         Type: uniqueType,
+        bodyClass:"types",
         Rarity: uniqueRarity,
         Arena: uniqueArena,
         pageID: typeID.toUpperCase()
     });
     } else{
-        res.render('/')
+        res.render('/')        // check how to send to the index page when error
     }  
 });
 
