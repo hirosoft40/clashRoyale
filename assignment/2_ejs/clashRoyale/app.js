@@ -7,7 +7,13 @@ app.set('appData', dataFile);
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-app.locals.allCards = dataFile.cards;
+
+// header info
+// const uniqueArena =[], uniqueRarity =[], uniqueType=[];
+app.locals.uniqueType = [...new Set(dataFile.cards.map(item => item.Type))];
+app.locals.uniqueRarity = [...new Set(dataFile.cards.map(item => item.Rarity))];
+app.locals.uniqueArena = [...new Set(dataFile.cards.map(item => item.Arena.trim()))];
+
 
 app.use(express.static('public'));
 app.use(require('./routes/index'));

@@ -19,7 +19,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        <%Type.forEach(item=>{%>
+                        <%uniqueType.forEach(item=>{%>
                         <a class="dropdown-item" href="/types/<%=item%>">
                             <%=item%></a>
                         <%});%>
@@ -34,7 +34,7 @@
                         Rarity
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <%Rarity.forEach(item=>{%>
+                        <%uniqueRarity.forEach(item=>{%>
                         <a class="dropdown-item" href="/rarity/<%=item%>">
                             <%=item%></a>
                         <%});%>
@@ -48,7 +48,7 @@
                         Arena
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <%Arena.forEach(item=>{%>
+                        <%uniqueArena.forEach(item=>{%>
                         <% let itemTrim = item.split(" ").join("")%>
                         <a class="dropdown-item" href="/arenas/<%=itemTrim%>"><%=item%></a>
                         <%});%>
