@@ -1,12 +1,30 @@
-body{
+.index{
     background-image: url('/imgs/bg_imgs/bg_darkBlue.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Changa', sans-serif; 
-    color:white;
 }
 h1{
     text-align: center;
     margin:50px;
     font-size:60px;
+}
+.cards {
+    background-image: url('/imgs/bg_imgs/bg_blue.png');
+}
+.types {
+    background-image: url('/imgs/bg_imgs/bg_blue.png');
+}
+.text{
+    font-family: 'Lato', sans-serif;
+    color:#fff
+}
+.text a{
+    color:#fff;
+}
+h3 a{
+    color:#fff;
+    font-size:30px;
+}
+a:hover{
+    color:red;
 }

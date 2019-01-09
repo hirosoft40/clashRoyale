@@ -14,7 +14,7 @@
          "Type": "Buildings",
          "ElixirCost": "4",
          "Rarity": "Rare",
-         "Arena": "Arena10",
+         "Arena": "Arena 10",
          "Summary": "Defensive building that houses a Bomber. Deals area damage to anything dumb enough to stand near it.The Bomb Tower card is unlocked from the Hog Mountain (Arena 10). It is an area damage, medium-ranged building with both moderate hitpoints and damage. A Bomb Tower card costs 4 Elixir to deploy. The Tower will throw bombs, just like the Bomber, to any opposing troops in its defensive radius. However, it cannot attack air units. The thrown bombs deal area damage, which is perfect against swarm units with relatively low health such as the Skeleton Army and Barbarians.",
          "Artwork": "BombTowerCard.png"
       },
@@ -42,7 +42,7 @@
          "ElixirCost": "4",
          "Rarity": "Rare",
          "Arena": "Arena 5",
-         "Summary": "The Furnace card is unlocked from the Spell Valley (Arena 5). It is a moderate hitpoint building that spawns a pair of Fire Spirits every 10 seconds. A Furnace card costs 4 Elixir to deploy. It appears to be a cast-iron steam train furnace with a bubbling cauldron of Elixir on top of it. It is also covered with various other props, including a ladder on the side of it, and a pile of firewood on the other.",
+         "Summary": "The Furnace card is unlocked from the Spells Valley (Arena 5). It is a moderate hitpoint building that spawns a pair of Fire Spirits every 10 seconds. A Furnace card costs 4 Elixir to deploy. It appears to be a cast-iron steam train furnace with a bubbling cauldron of Elixir on top of it. It is also covered with various other props, including a ladder on the side of it, and a pile of firewood on the other.",
          "Artwork": "FurnaceCard.png"
       },
       {
@@ -101,160 +101,160 @@
       },
       {
          "Name": "Arrows",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "3",
          "Rarity": "Common",
          "Arena": "Training Camp",
-         "Summary": "The Arrows card is unlocked from the Training Camp (Tutorial). It is an area damage spell with a very wide radius and low-moderate damage. An Arrows card costs 3 Elixir to cast.",
+         "Summary": "The Arrows card is unlocked from the Training Camp (Tutorial). It is an area damage Spells with a very wide radius and low-moderate damage. An Arrows card costs 3 Elixir to cast.",
          "Artwork": "ArrowsCard.png"
       },
       {
          "Name": "Barbarian Barrel",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "2",
          "Rarity": "Epic",
          "Arena": "Arena 3",
-         "Summary": "The Barbarian Barrel card is unlocked from the Barbarian Bowl (Arena 3). It is an area damage spell with a moderate area of effect and damage. When cast, the Barbarian Barrel rolls across the Arena, damaging ground troops and buildings in its path. After rolling for 5 tiles, it will break open and release a Barbarian. A Barbarian Barrel card costs 2 Elixir to cast.",
+         "Summary": "The Barbarian Barrel card is unlocked from the Barbarian Bowl (Arena 3). It is an area damage Spells with a moderate area of effect and damage. When cast, the Barbarian Barrel rolls across the Arena, damaging ground troops and buildings in its path. After rolling for 5 tiles, it will break open and release a Barbarian. A Barbarian Barrel card costs 2 Elixir to cast.",
          "Artwork": "BarbarianBarrelCard.png"
       },
       {
          "Name": "Clone",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "3",
          "Rarity": "Epic",
          "Arena": "Arena 11",
-         "Summary": "The Clone card is unlocked from the Electro Valley (Arena 11). It is a spell that clones, or duplicates, all troops within its relatively large area of effect. However, cloned units and any shields only have one hitpoint. A Clone card costs 3 Elixir to cast. The Clone will push the original unit to the left while the new cloned unit is spawned on the right.",
+         "Summary": "The Clone card is unlocked from the Electro Valley (Arena 11). It is a Spells that clones, or duplicates, all troops within its relatively large area of effect. However, cloned units and any shields only have one hitpoint. A Clone card costs 3 Elixir to cast. The Clone will push the original unit to the left while the new cloned unit is spawned on the right.",
          "Artwork": "CloneCard.png"
       },
       {
          "Name": "Fireball",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "4",
          "Rarity": "Rare",
          "Arena": "Training Camp",
-         "Summary": "The Fireball card is unlocked from the Training Camp (Tutorial). It is an area damage spell with a medium radius and moderately high damage. A Fireball card costs 4 Elixir to cast. It will push back certain small troops.",
+         "Summary": "The Fireball card is unlocked from the Training Camp (Tutorial). It is an area damage Spells with a medium radius and moderately high damage. A Fireball card costs 4 Elixir to cast. It will push back certain small troops.",
          "Artwork": "FireballCard.png"
       },
       {
          "Name": "Freeze",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "4",
          "Rarity": "Epic",
          "Arena": "Arena 5",
-         "Summary": "The Freeze card is unlocked from the Spell Valley (Arena 5). It is a spell prevents all enemy units and buildings inside its radius that were placed before the Freeze from moving or attacking. It also deals minor damage. The Freeze card costs 4 Elixir to cast.",
+         "Summary": "The Freeze card is unlocked from the Spells Valley (Arena 5). It is a Spells prevents all enemy units and buildings inside its radius that were placed before the Freeze from moving or attacking. It also deals minor damage. The Freeze card costs 4 Elixir to cast.",
          "Artwork": "FreezeCard.png"
       },
       {
          "Name": "Goblin Barrel",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "3",
          "Rarity": "Epic",
          "Arena": "Arena 1",
-         "Summary": "The Goblin Barrel card is unlocked from the Goblin Stadium (Arena 1). It is a spell that launches a barrel from the player's King's Tower. Upon impact, the barrel breaks open and spawns three Goblins. A Goblin Barrel card costs 3 Elixir to deploy.",
+         "Summary": "The Goblin Barrel card is unlocked from the Goblin Stadium (Arena 1). It is a Spells that launches a barrel from the player's King's Tower. Upon impact, the barrel breaks open and spawns three Goblins. A Goblin Barrel card costs 3 Elixir to deploy.",
          "Artwork": "GoblinBarrelCard.png"
       },
       {
          "Name": "Graveyard",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "5",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 5",
-         "Summary": "The Graveyard card is unlocked from the Spell Valley (Arena 5) or a Legendary Chest. It is a spell with a wide radius that spawns 16 Skeletons. The Skeletons appear one by one in random positions on the edge of the spell's radius. The Graveyard can be cast anywhere in the Arena. A Graveyard spell costs 5 Elixir to cast.",
+         "Summary": "The Graveyard card is unlocked from the Spells Valley (Arena 5) or a Legendary Chest. It is a Spells with a wide radius that spawns 16 Skeletons. The Skeletons appear one by one in random positions on the edge of the Spells's radius. The Graveyard can be cast anywhere in the Arena. A Graveyard Spells costs 5 Elixir to cast.",
          "Artwork": "GraveyardCard.png"
       },
       {
          "Name": "Giant Snowball",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "2",
          "Rarity": "Common",
          "Arena": "Arena 8",
-         "Summary": "The Giant Snowball card is unlocked from Frozen Peak (Arena 8). It is an area of effect spell that deals low damage in a 3 tile radius. This spell slows all enemies within its radius for 2.5 seconds and will knock back all but the heaviest of troops. A Giant Snowball card costs 2 Elixir to cast.",
+         "Summary": "The Giant Snowball card is unlocked from Frozen Peak (Arena 8). It is an area of effect Spells that deals low damage in a 3 tile radius. This Spells slows all enemies within its radius for 2.5 seconds and will knock back all but the heaviest of troops. A Giant Snowball card costs 2 Elixir to cast.",
          "Artwork": "GiantSnowballCard.png"
       },
       {
          "Name": "Heal",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "1",
          "Rarity": "Rare",
          "Arena": "Arena 7",
-         "Summary": "The Heal card is unlocked from the Royal Arena (Arena 7). It is an area of effect spell that heals friendly troops. The Heal regenerates your units' health every 0.5 seconds, for a total of four pulses over the 2 seconds duration of the Heal. A Heal card costs 1 Elixir to cast.",
+         "Summary": "The Heal card is unlocked from the Royal Arena (Arena 7). It is an area of effect Spells that heals friendly troops. The Heal regenerates your units' health every 0.5 seconds, for a total of four pulses over the 2 seconds duration of the Heal. A Heal card costs 1 Elixir to cast.",
          "Artwork": "HealCard.png"
       },
       {
          "Name": "Lightning",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "6",
          "Rarity": "Epic",
          "Arena": "Arena 4",
-         "Summary": "The Lightning card is unlocked from the P.E.K.K.A.'s Playhouse (Arena 4). It is a spell with a wide radius and very high damage. When cast, the Lightning will cause three bolts of lightning to rain down from the sky, targeting the 3 troops or buildings with the highest hitpoints within its area of effect, dealing very high damage and a brief stun to each. A Lightning card costs 6 Elixir to cast.",
+         "Summary": "The Lightning card is unlocked from the P.E.K.K.A.'s Playhouse (Arena 4). It is a Spells with a wide radius and very high damage. When cast, the Lightning will cause three bolts of lightning to rain down from the sky, targeting the 3 troops or buildings with the highest hitpoints within its area of effect, dealing very high damage and a brief stun to each. A Lightning card costs 6 Elixir to cast.",
          "Artwork": "LightningCard.png"
       },
       {
          "Name": "Mirror",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "? (Cost of previous card played +1)",
          "Rarity": "Epic",
          "Arena": "Arena 11",
-         "Summary": "The Mirror card is unlocked from the Electro Valley (Arena 11). It is a spell that repeats your last card played for 1 extra Elixir, as the description states. The level of the copied card depends on the level of the Mirror. When in a battle, the card will display your last placed card inside the Mirror. A Mirror card doesn't have a defined Elixir cost; instead, it shows a '?'. At Max level the Mirror will place a card one level higher than your previous card's maximum level, 14.",
+         "Summary": "The Mirror card is unlocked from the Electro Valley (Arena 11). It is a Spells that repeats your last card played for 1 extra Elixir, as the description states. The level of the copied card depends on the level of the Mirror. When in a battle, the card will display your last placed card inside the Mirror. A Mirror card doesn't have a defined Elixir cost; instead, it shows a '?'. At Max level the Mirror will place a card one level higher than your previous card's maximum level, 14.",
          "Artwork": "MirrorCard.png"
       },
       {
-         "Name": "Poison Spell",
-         "Type": "Spell",
+         "Name": "Poison Spells",
+         "Type": "Spells",
          "ElixirCost": "4",
          "Rarity": "Epic",
          "Arena": "Arena 5",
-         "Summary": "The Poison card is unlocked from the Spell Valley (Arena 5). It is an area damage spell with a fairly wide radius and moderate damage. It creates a circular area in which troops and buildings are damaged slowly over time. It is a deep orange liquid in a thin oblong vial. A Poison card costs 4 Elixir to cast.",
-         "Artwork": "PoisonSpellCard.png"
+         "Summary": "The Poison card is unlocked from the Spells Valley (Arena 5). It is an area damage Spells with a fairly wide radius and moderate damage. It creates a circular area in which troops and buildings are damaged slowly over time. It is a deep orange liquid in a thin oblong vial. A Poison card costs 4 Elixir to cast.",
+         "Artwork": "PoisonSpellsCard.png"
       },
       {
          "Name": "Rage",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "2",
          "Rarity": "Epic",
          "Arena": "Arena 10",
-         "Summary": "The Rage card is unlocked from the Hog Mountain (Arena 10). It is a spell that increases the attack speed and movement speed of troops and buildings by 35% in the spell's area of effect. A Rage card costs 2 Elixir to cast. The Rage is a deep purple potion packed in a large bottle similar to its Clash of Clans counterpart.",
+         "Summary": "The Rage card is unlocked from the Hog Mountain (Arena 10). It is a Spells that increases the attack speed and movement speed of troops and buildings by 35% in the Spells's area of effect. A Rage card costs 2 Elixir to cast. The Rage is a deep purple potion packed in a large bottle similar to its Clash of Clans counterpart.",
          "Artwork": "RageCard.png"
       },
       {
          "Name": "Rocket",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "6",
          "Rarity": "Rare",
          "Arena": "Arena 6",
-         "Summary": "The Rocket card is unlocked from the Builder's Workshop (Arena 6). It is an area damage spell with a small radius that inflicts very high damage on impact. A Rocket card costs 6 Elixir to cast. It is a damage dealing spell that launches a large missile from the King's Tower.",
+         "Summary": "The Rocket card is unlocked from the Builder's Workshop (Arena 6). It is an area damage Spells with a small radius that inflicts very high damage on impact. A Rocket card costs 6 Elixir to cast. It is a damage dealing Spells that launches a large missile from the King's Tower.",
          "Artwork": "RocketCard.png"
       },
       {
          "Name": "The Log",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "2",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 6",
-         "Summary": "The Log card is unlocked from the Builder's Workshop (Arena 6) or a Legendary Chest. It is an area damage spell with a wide radius and moderate damage. The Log costs 2 Elixir to cast. When cast, The Log rolls through the Arena, dealing damage and knocking back any ground troops in its path before disintegrating after rolling for 11.1 tiles.",
+         "Summary": "The Log card is unlocked from the Builder's Workshop (Arena 6) or a Legendary Chest. It is an area damage Spells with a wide radius and moderate damage. The Log costs 2 Elixir to cast. When cast, The Log rolls through the Arena, dealing damage and knocking back any ground troops in its path before disintegrating after rolling for 11.1 tiles.",
          "Artwork": "TheLogCard.png"
       },
       {
          "Name": "Tornado",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "3",
          "Rarity": "Epic",
          "Arena": "Arena 8",
-         "Summary": "The Tornado card is unlocked from Frozen Peak (Arena 8). It is an area damage spell with a wide radius and low damage. A Tornado card costs 3 Elixir to cast. It pulls troops towards the center of the spell, making them more vulnerable to splash damage. The card image shows a tornado with a pig (possibly the Hog Rider's) being sucked into the tornado. A Tornado slightly damages an enemy unit in its area of effect every 0.5 seconds.",
+         "Summary": "The Tornado card is unlocked from Frozen Peak (Arena 8). It is an area damage Spells with a wide radius and low damage. A Tornado card costs 3 Elixir to cast. It pulls troops towards the center of the Spells, making them more vulnerable to splash damage. The card image shows a tornado with a pig (possibly the Hog Rider's) being sucked into the tornado. A Tornado slightly damages an enemy unit in its area of effect every 0.5 seconds.",
          "Artwork": "TornadoCard.png"
       },
       {
          "Name": "Zap",
-         "Type": "Spell",
+         "Type": "Spells",
          "ElixirCost": "2",
          "Rarity": "Common",
          "Arena": "Arena 4",
-         "Summary": "The Zap card is unlocked from P.E.K.K.A.'s Playhouse (Arena 4). It is an area damage spell with a medium radius and low damage. When used, this spell can stun enemies in its effective radius for 0.5 seconds. A Zap card costs 2 Elixir to cast.",
+         "Summary": "The Zap card is unlocked from P.E.K.K.A.'s Playhouse (Arena 4). It is an area damage Spells with a medium radius and low damage. When used, this Spells can stun enemies in its effective radius for 0.5 seconds. A Zap card costs 2 Elixir to cast.",
          "Artwork": "ZapCard.png"
       },
       {
          "Name": "Archers",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
          "Rarity": "Common",
          "Arena": "Training Camp",
@@ -263,7 +263,7 @@
       },
       {
          "Name": "Baby Dragon",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
          "Rarity": "Epic",
          "Arena": "Training Camp",
@@ -272,7 +272,7 @@
       },
       {
          "Name": "Balloon",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Epic",
          "Arena": "Arena 2",
@@ -281,16 +281,16 @@
       },
       {
          "Name": "Bandit",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 9",
          "Summary": "The Bandit card is unlocked from the Jungle Arena (Arena 9) or a Legendary Chest. She is a troop with moderate hitpoints and damage that has the ability to dash to nearby targets, dealing double damage if she hits a target with her dash, similar to a Prince's charge. She is immune to damage while dashing. A Bandit card costs 3 Elixir to deploy. She has white hair, wears a mask, and wields a blackjack.",
          "Artwork": "BanditCard.png"
       },
       {
          "Name": "Barbarians",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Common",
          "Arena": "Arena 3",
@@ -299,16 +299,16 @@
       },
       {
          "Name": "Bats",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "2",
          "Rarity": "Common",
          "Arena": "Arena 5",
-         "Summary": "The Bats card is unlocked from Spell Valley (Arena 5). It spawns five single-target, melee Bats with very low hitpoints and damage. They are the same as those spawned by the Night Witch. A Bats card costs 2 Elixir to deploy",
+         "Summary": "The Bats card is unlocked from Spells Valley (Arena 5). It spawns five single-target, melee Bats with very low hitpoints and damage. They are the same as those spawned by the Night Witch. A Bats card costs 2 Elixir to deploy",
          "Artwork": "BatsCard.png"
       },
       {
          "Name": "Battle Ram",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
          "Rarity": "Rare",
          "Arena": "Arena 3",
@@ -317,7 +317,7 @@
       },
       {
          "Name": "Bomber",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
          "Rarity": "Common",
          "Arena": "Training Camp",
@@ -326,7 +326,7 @@
       },
       {
          "Name": "Bowler",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Epic",
          "Arena": "Arena 8",
@@ -335,7 +335,7 @@
       },
       {
          "Name": "Cannon Cart",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Epic",
          "Arena": "Arena 6",
@@ -344,7 +344,7 @@
       },
       {
          "Name": "Dart Goblin",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
          "Rarity": "Rare",
          "Arena": "Arena 9",
@@ -353,7 +353,7 @@
       },
       {
          "Name": "Dark Prince",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
          "Rarity": "Epic",
          "Arena": "Arena 7",
@@ -362,7 +362,7 @@
       },
       {
          "Name": "Elite Barbarians",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "6",
          "Rarity": "Common",
          "Arena": "Arena 10",
@@ -371,7 +371,7 @@
       },
       {
          "Name": "Electro Dragon",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Epic",
          "Arena": "Arena 11",
@@ -380,16 +380,16 @@
       },
       {
          "Name": "Electro Wizard",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 11",
          "Summary": "The Electro Wizard card is unlocked from the Electro Valley (Arena 11) or a Legendary Chest. He is a double-target, ranged troop with moderate hitpoints and damage. His attacks briefly stun his targets. He stuns and deals minor area damage upon deployment. An Electro Wizard card costs 4 Elixir to deploy.",
          "Artwork": "ElectroWizardCard.png"
       },
       {
          "Name": "Executioner",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Epic",
          "Arena": "Arena 9",
@@ -398,7 +398,7 @@
       },
       {
          "Name": "Flying Machine",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
          "Rarity": "Rare",
          "Arena": "Arena 6",
@@ -407,16 +407,16 @@
       },
       {
          "Name": "Fire Spirits",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "2",
          "Rarity": "Common",
          "Arena": "Arena 5",
-         "Summary": "The Fire Spirits card is unlocked from the Spell Valley (Arena 5). It spawns three area damage, short-ranged Fire Spirits with low hitpoints and moderate damage. A Fire Spirits card costs 2 Elixir to deploy. Fire Spirits launch themselves at their target when attacking, destroying themselves on impact. They resemble small chunks of flaming coal with arms and legs.",
+         "Summary": "The Fire Spirits card is unlocked from the Spells Valley (Arena 5). It spawns three area damage, short-ranged Fire Spirits with low hitpoints and moderate damage. A Fire Spirits card costs 2 Elixir to deploy. Fire Spirits launch themselves at their target when attacking, destroying themselves on impact. They resemble small chunks of flaming coal with arms and legs.",
          "Artwork": "FireSpiritsCard.png"
       },
       {
          "Name": "Giant",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Rare",
          "Arena": "Training Camp",
@@ -425,7 +425,7 @@
       },
       {
          "Name": "Giant Skeleton",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "6",
          "Rarity": "Epic",
          "Arena": "Arena 2",
@@ -434,7 +434,7 @@
       },
       {
          "Name": "Goblin Gang",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
          "Rarity": "Common",
          "Arena": "Arena 9",
@@ -443,7 +443,7 @@
       },
       {
          "Name": "Goblin Giant",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "6",
          "Rarity": "Epic",
          "Arena": "Arena 9",
@@ -452,7 +452,7 @@
       },
       {
          "Name": "Goblins",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "2",
          "Rarity": "Common",
          "Arena": "Arena 1",
@@ -461,7 +461,7 @@
       },
       {
          "Name": "Golem",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "8",
          "Rarity": "Epic",
          "Arena": "Arena 3",
@@ -470,7 +470,7 @@
       },
       {
          "Name": "Guards",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
          "Rarity": "Epic",
          "Arena": "Arena 7",
@@ -479,16 +479,16 @@
       },
       {
          "Name": "Fire Spirits",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "2",
          "Rarity": "Common",
          "Arena": "Arena 5",
-         "Summary": "The Fire Spirits card is unlocked from the Spell Valley (Arena 5). It spawns three area damage, short-ranged Fire Spirits with low hitpoints and moderate damage. A Fire Spirits card costs 2 Elixir to deploy. Fire Spirits launch themselves at their target when attacking, destroying themselves on impact. They resemble small chunks of flaming coal with arms and legs.",
+         "Summary": "The Fire Spirits card is unlocked from the Spells Valley (Arena 5). It spawns three area damage, short-ranged Fire Spirits with low hitpoints and moderate damage. A Fire Spirits card costs 2 Elixir to deploy. Fire Spirits launch themselves at their target when attacking, destroying themselves on impact. They resemble small chunks of flaming coal with arms and legs.",
          "Artwork": "FireSpiritsCard.png"
       },
       {
          "Name": "Hog Rider",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
          "Rarity": "Rare",
          "Arena": "Arena 4",
@@ -497,7 +497,7 @@
       },
       {
          "Name": "Hunter",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
          "Rarity": "Epic",
          "Arena": "Arena 1",
@@ -506,7 +506,7 @@
       },
       {
          "Name": "Ice Golem",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "2",
          "Rarity": "Rare",
          "Arena": "Arena 8",
@@ -515,7 +515,7 @@
       },
       {
          "Name": "Ice Spirit",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "1",
          "Rarity": "Common",
          "Arena": "Arena 8",
@@ -524,25 +524,25 @@
       },
       {
          "Name": "Ice Wizard",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 5",
          "Summary": "The Ice Wizard card is unlocked from the Frozen Peak (Arena 8) or a Legendary Chest. He is a medium-ranged troop with moderate hitpoints and low area damage. The Ice Wizard's attacks will slow his targets' movement and attack speed by 35%. His hair and eyes are blue, and he wears thick robes. An Ice Wizard card costs 3 Elixir to deploy.",
          "Artwork": "IceWizardCard.png"
       },
       {
          "Name": "Inferno Dragon",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 6",
          "Summary": "The Inferno Dragon card is unlocked from the Builder's Workshop (Arena 6). It is a single-target, short-ranged, flying troop with moderate hitpoints and has various damage stages. An Inferno Dragon card costs 4 Elixir to deploy. The Inferno Dragon's damage increases over time as it remains focused on a single target, similar to the Inferno Tower. It resembles a Baby Dragon with a helmet and a barrel on its back which appears to be some form of jetpack or fuel storage.",
          "Artwork": "InfernoDragonCard.png"
       },
       {
          "Name": "Knight",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
          "Rarity": "Common",
          "Arena": "Training Camp",
@@ -551,34 +551,34 @@
       },
       {
          "Name": "Lava Hound",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "7",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 4",
          "Summary": "The Lava Hound card is unlocked from the P.E.K.K.A's Playhouse (Arena 4) or a Legendary Chest. It is a building-targeting, short-ranged, flying troop with very high hitpoints and low damage. Upon death, it bursts into 6 spread out Lava Pups which have no preferred target and deal the same damage as the Lava Hound but each have much lower hitpoints. It only attacks buildings, has high hitpoints and splits into smaller units, similar to the Golem. The Lava Hound appears to be a flying, burning rock beast with an underbite, short wings, small rocky dog ears, and small limbs. A Lava Hound card costs 7 Elixir to deploy.",
          "Artwork": "LavaHoundCard.png"
       },
       {
          "Name": "Lumberjack",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 8",
-         "Summary": "The Lumberjack card is unlocked from the Frozen Peak (Arena 8) or a Legendary Chest. He is a very fast, single-target, melee troop with moderate hitpoints and a high damage output. A Lumberjack card costs 4 Elixir to deploy. Upon death, he drops a bottle of Rage that increases the attack and movement speed of friendly troops and buildings in the spell's effective radius.",
+         "Summary": "The Lumberjack card is unlocked from the Frozen Peak (Arena 8) or a Legendary Chest. He is a very fast, single-target, melee troop with moderate hitpoints and a high damage output. A Lumberjack card costs 4 Elixir to deploy. Upon death, he drops a bottle of Rage that increases the attack and movement speed of friendly troops and buildings in the Spells's effective radius.",
          "Artwork": "LumberjackCard.png"
       },
       {
          "Name": "Magic Archer",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 10",
          "Summary": "The Magic Archer card is unlocked from the Hog Mountain (Arena 10) or a Legendary Chest. He is an area damage, long-ranged troop with moderate damage and hitpoints. The Magic Archer shoots arrows which go linearly to damage the his target and any other units in the arrow's path. A Magic Archer card costs 4 Elixir to deploy.",
          "Artwork": "MagicArcherCard.png"
       },
       {
          "Name": "Mega Minion",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
          "Rarity": "Rare",
          "Arena": "Arena 4",
@@ -587,25 +587,25 @@
       },
       {
          "Name": "Mega Knight",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "7",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 10",
          "Summary": "The Mega Knight card is unlocked from Hog Mountain (Arena 10) or a Legendary Chest. He is an area damage, ground, melee troop with very high hitpoints and moderately high damage. He deals moderately high spawn damage when deployed and jumps to targets that are between 4 to 5 tiles away from him, dealing 2× his normal area damage on impact. A Mega Knight card costs 7 Elixir to deploy. The Mega Knight wears black armor with a helmet that covers most of his face and wields two mace-like weapons attached to his arms.",
          "Artwork": "MegaKnightCard.png"
       },
       {
          "Name": "Miner",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 4",
          "Summary": "The Miner card is unlocked from the P.E.K.K.A.'s Playhouse (Arena 4) or a Legendary Chest. He is a single-target, melee troop with both moderate hitpoints and damage. A Miner card costs 3 Elixir to deploy. The Miner is the only troop that can be deployed anywhere on the Arena. He appears to be a joyous digger with a bright red nose, a shovel, and a black helmet with a candle on it.",
          "Artwork": "MinerCard.png"
       },
       {
          "Name": "Mini P.E.K.K.A",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
          "Rarity": "Rare",
          "Arena": "Training Camp",
@@ -614,7 +614,7 @@
       },
       {
          "Name": "Minion Horde",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Common",
          "Arena": "Arena 4",
@@ -623,7 +623,7 @@
       },
       {
          "Name": "Minions",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
          "Rarity": "Common",
          "Arena": "Training Camp",
@@ -632,7 +632,7 @@
       },
       {
          "Name": "Musketeer",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
          "Rarity": "Rare",
          "Arena": "Training Camp",
@@ -641,16 +641,16 @@
       },
       {
          "Name": "Night Witch",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 5",
-         "Summary": "The Night Witch card is unlocked from Spell Valley (Arena 5) or a Legendary Chest. She is a single-target melee troop with moderate hitpoints and high damage. She summons 2 Bats every 7 seconds, in addition to summoning two Bats upon death. A Night Witch card costs 4 Elixir to deploy.",
+         "Summary": "The Night Witch card is unlocked from Spells Valley (Arena 5) or a Legendary Chest. She is a single-target melee troop with moderate hitpoints and high damage. She summons 2 Bats every 7 seconds, in addition to summoning two Bats upon death. A Night Witch card costs 4 Elixir to deploy.",
          "Artwork": "NightWitchCard.png"
       },
       {
          "Name": "P.E.K.K.A",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "7",
          "Rarity": "Epic",
          "Arena": "Arena 4",
@@ -659,7 +659,7 @@
       },
       {
          "Name": "Prince",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Epic",
          "Arena": "Training Camp",
@@ -668,25 +668,25 @@
       },
       {
          "Name": "Princess",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 7",
          "Summary": "The Princess card is unlocked from the Royal Arena (Arena 7) or a Legendary Chest. She is an area damage, long-ranged troop with low hitpoints and moderate damage. Her long range allows her to target and attack Princess Towers from the opposite side of the river. A Princess card costs 3 Elixir to deploy.",
          "Artwork": "PrincessCard.png"
       },
       {
          "Name": "Ram Rider",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 10",
          "Summary": "The Ram Rider card is unlocked from Hog Mountain (Arena 10) or a Legendary Chest. It spawns a moderate-high health woman riding a ram. The Ram itself targets buildings while the Rider only targets troops, rooting them. A Ram Rider card costs 5 Elixir to deploy.",
          "Artwork": "RamRiderCard.png"
       },
       {
          "Name": "Rascals",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Common",
          "Arena": "Arena 9",
@@ -695,7 +695,7 @@
       },
       {
          "Name": "Royal Giant",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "6",
          "Rarity": "Common",
          "Arena": "Arena 7",
@@ -704,16 +704,16 @@
       },
       {
          "Name": "Royal Ghost",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 7",
          "Summary": "The Royal Ghost card is unlocked from the Royal Arena (Arena 7) or a Legendary Chest. He is an area damage, melee troop with moderate hitpoints and damage. A Royal Ghost card costs 3 Elixir to deploy.",
          "Artwork": "RoyalGhostCard.png"
       },
       {
          "Name": "Royal Hog",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Rare",
          "Arena": "Arena 10",
@@ -722,7 +722,7 @@
       },
       {
          "Name": "Skeleton Army",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
          "Rarity": "Epic",
          "Arena": "Training Camp",
@@ -731,7 +731,7 @@
       },
       {
          "Name": "Skeletons",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "1",
          "Rarity": "Common",
          "Arena": "Arena 2",
@@ -740,7 +740,7 @@
       },
       {
          "Name": "Skeleton Barrel",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "3",
          "Rarity": "Common",
          "Arena": "Arena 6",
@@ -749,16 +749,16 @@
       },
       {
          "Name": "Sparky",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "6",
-         "Rarity": "legendary",
+         "Rarity": "Legendary",
          "Arena": "Arena 11",
          "Summary": "The Sparky card is unlocked from the Electro Valley (Arena 11) or a Legendary Chest. She is an area damage, medium-ranged troop with moderate hitpoints and extremely high damage. A Sparky card costs 6 Elixir to deploy. The Sparky takes the appearance of a siege machine with a tesla coil mounted atop of it.",
          "Artwork": "SparkyCard.png"
       },
       {
          "Name": "Spear Goblins",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "2",
          "Rarity": "Common",
          "Arena": "Arena 1",
@@ -767,7 +767,7 @@
       },
       {
          "Name": "Three Musketeers",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "9",
          "Rarity": "Rare",
          "Arena": "Arena 7",
@@ -776,7 +776,7 @@
       },
       {
          "Name": "Valkyrie",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
          "Rarity": "Rare",
          "Arena": "Arena 1",
@@ -785,7 +785,7 @@
       },
       {
          "Name": "Witch",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Epic",
          "Arena": "Training Camp",
@@ -794,16 +794,16 @@
       },
       {
          "Name": "Wizard",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "5",
          "Rarity": "Rare",
          "Arena": "Arena 5",
-         "Summary": "The Wizard card is unlocked from the Spell Valley (Arena 5). He is an area-damage, medium-ranged troop with both moderate hitpoints and damage output. A Wizard card costs 5 Elixir to deploy.",
+         "Summary": "The Wizard card is unlocked from the Spells Valley (Arena 5). He is an area-damage, medium-ranged troop with both moderate hitpoints and damage output. A Wizard card costs 5 Elixir to deploy.",
          "Artwork": "WizardCard.png"
       },
       {
          "Name": "Zappies",
-         "Type": "Troop",
+         "Type": "Troops",
          "ElixirCost": "4",
          "Rarity": "Rare",
          "Arena": "Arena 11",

@@ -1,22 +1,32 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/',(req, res)=>{
+var data = require('../data/clashRoyaleData.json');
+
+// Types Cards
+router.get('/types/:typeID/',(req, res)=>{
     let data = req.app.get('appData');
     let uniqueArena =[], uniqueRarity =[], uniqueType=[];
+    let pageCards=data.cards;
+    let typeID = req.params.typeID;
 
     uniqueType = [...new Set(data.cards.map(item => item.Type))];
     uniqueRarity = [...new Set(data.cards.map(item => item.Rarity))];
     uniqueArena = [...new Set(data.cards.map(item => item.Arena.trim()))];
 
-    res.render('index',{
+    let newData = pageCards.filter(ele => ele.Type===typeID)
+    if (newData){
+    res.render('types',{
         pageTitle:'Clash Royale Community',
+        cards: newData,
         Type: uniqueType,
         Rarity: uniqueRarity,
         Arena: uniqueArena,
-        pageID:'home'
+        pageID: typeID.toUpperCase()
     });
+    } else{
+        res.render('/')
+    }  
 });
 
 module.exports = router;
-

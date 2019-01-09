@@ -1,0 +1,21 @@
+<section class="main">
+    <div class='container '>
+        <div class='mt-5'>
+            <h1 class='pt-5'> <%= pageID %></h1>
+        </div>
+        <% cards.forEach(ele =>{%>
+        <div class ='row mb-5 d-flex'>
+            <div class ='col text-right mt-0 mr-5 order-2 order-md-1"'>
+                <img class='align-self-start'src = '/imgs/cards/<%= ele.Artwork%>'>
+            </div>
+            <div class="word col order-1 order-md-2 ">
+                <h3><a href='/cards/<%= cards.indexOf(ele) %>'> <%= ele.Name.toUpperCase() %></a></h3>
+                <p>Type: <span class='text'> <a href='/<%= ele.Type %>/'><%= ele.Type %></a></span></p>
+                <p>Elixir Cost: <span class='text'> <%= ele.ElixirCost %></span></p>
+                <p>Rarity: <span class='text'> <%= ele.Rarity %></span></p>
+                <p>Arena: <span class='text'> <%= ele.Arena %></span></p>
+                <p class='text'><%= ele.Summary %></p>
+            </div>
+        </div>
+        <% }); %>
+    </div>

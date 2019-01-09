@@ -2,10 +2,12 @@
 
 /* <a href="https://www.clipartmax.com/middle/m2i8m2G6A0i8b1m2_clash-royale-logo-logo-de-clash-royale-png/" target="_blank">Clash Royale Logo - Logo De Clash Royale Png @clipartmax.com</a> */
 
-@import url(https://fonts.googleapis.com/css?family=Changa:700|Denk+One|Palanquin:700|Ubuntu+Mono:700|Viga);
+@import url(https://fonts.googleapis.com/css?family=Changa:700|Denk+One|Lato|Palanquin:700|Ubuntu+Mono:700|Viga);
 body{
     margin:0;
     padding:0;
+    font-family: 'Changa', sans-serif; 
+    color:white;
 }
 
 nav{

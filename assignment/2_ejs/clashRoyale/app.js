@@ -12,9 +12,9 @@ app.locals.allCards = dataFile.cards;
 app.use(express.static('public'));
 app.use(require('./routes/index'));
 app.use(require('./routes/cards'));
-app.use(require('./routes/buildings'));
-app.use(require('./routes/spells'));
-app.use(require('./routes/troops'));
+app.use(require('./routes/types'));
+app.use(require('./routes/rarity'));
+app.use(require('./routes/arenas'));
 
 
 // app.listen(app.get('port'),()=>
