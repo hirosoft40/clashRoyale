@@ -1,7 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-var data = require('../data/clashRoyaleData.json');
+// var data = require('../data/clashRoyaleData.json');
+
+router.get('/types', (req, res)=>{
+    res.redirect('/cards');
+});
 
 // Types Cards
 router.get('/types/:typeID/',(req, res)=>{
@@ -16,17 +20,17 @@ router.get('/types/:typeID/',(req, res)=>{
 
     let newData = pageCards.filter(ele => ele.Type===typeID)
     if (newData){
-    res.render('types',{
-        pageTitle:'Clash Royale Community',
-        cards: newData,
-        Type: uniqueType,
-        bodyClass:"types",
-        Rarity: uniqueRarity,
-        Arena: uniqueArena,
-        pageID: typeID.toUpperCase()
-    });
+        res.render('types',{
+            pageTitle:'Clash Royale Community',
+            cards: newData,
+            Type: uniqueType,
+            bodyClass:"types",
+            Rarity: uniqueRarity,
+            Arena: uniqueArena,
+            pageID: typeID.toUpperCase()
+        });
     } else{
-        res.render('/')        // check how to send to the index page when error
+        res.redirect('/cards');        // if error, go back to all cards
     }  
 });
 
