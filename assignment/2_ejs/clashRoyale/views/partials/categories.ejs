@@ -10,10 +10,10 @@
             </div>
             <div class="word col order-1 order-md-2 ">
                 <h3><a href='/cards/<%= cards.indexOf(ele) %>'> <%= ele.Name.toUpperCase() %></a></h3>
-                <p>Type: <span class='text'> <a href='/<%= ele.Type %>/'><%= ele.Type %></a></span></p>
+                <p>Type: <span class='text'> <a href='/types/<%= ele.Type %>/'><%= ele.Type %></a></span></p>
                 <p>Elixir Cost: <span class='text'> <%= ele.ElixirCost %></span></p>
-                <p>Rarity: <span class='text'> <%= ele.Rarity %></span></p>
-                <p>Arena: <span class='text'> <%= ele.Arena %></span></p>
+                <p>Rarity: <span class='text'><a href='/rarity/<%= ele.Rarity %>/'><%= ele.Rarity %></a></span></p>
+                <p>Arena: <span class='text'><a href='/arenas/<%= ele.Arena.split(" ").join("") %>/'><%= ele.Arena %></a></span></p>
                 <p class='text'><%= ele.Summary %></p>
             </div>
         </div>
