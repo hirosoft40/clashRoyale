@@ -1,12 +1,9 @@
+
+/* background images */
 .index{
     background-image: url('/imgs/bg_imgs/bg_darkBlue.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-}
-h1{
-    text-align: center;
-    margin:50px;
-    font-size:60px;
 }
 .cards {
     background-image: url('/imgs/bg_imgs/bg_blue.png');
@@ -20,6 +17,13 @@ h1{
 .arena {
     background-image: url('/imgs/bg_imgs/bg_green.png');
 }
+
+h1{
+    text-align: center;
+    margin:50px;
+    font-size:60px;
+}
+
 .text{
     font-family: 'Lato', sans-serif;
     color:#fff
@@ -33,4 +37,32 @@ h3 a{
 }
 a:hover{
     color:red;
+}
+/* feedback page */
+.feedback{
+    background-image: url('/imgs/bg_imgs/bg_field.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.blackLayover{
+    background-color: rgba(0, 0, 0,.4);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:800px;
+}
+.btn{
+    letter-spacing: 0.1rem;
+}
+.form-group{
+    margin-bottom: 20px;
+    padding:10px;
+}
+.feedbackTitle{
+    text-align:center;
+    text-transform: uppercase;
+    margin:40px 10px 20px 10px;
+}
+#submit{
+    padding:10px;
+    
 }

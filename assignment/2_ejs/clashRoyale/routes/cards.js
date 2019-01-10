@@ -6,7 +6,6 @@ router.get('/cards',(req, res)=>{
     let pageCards = data.cards;
     
     res.render('cards',{
-        pageTitle:'Clash Royale Community',
         cards: pageCards,
         param:false,
         pageID:'All Cards'.toUpperCase()
@@ -33,7 +32,6 @@ router.get('/cards/:cardsID',(req, res)=>{
     }
     
     res.render('cards',{
-        pageTitle:'Clash Royale Community',
         cards: pageCards[cardsIndex],
         param:req.params.cardsID,
         pageID:pageCards[cardsIndex].Name.toUpperCase()

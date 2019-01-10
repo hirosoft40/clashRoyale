@@ -8,13 +8,11 @@ router.get('/types', (req, res)=>{
 // Types Cards
 router.get('/types/:typeID/',(req, res)=>{
     let data = req.app.get('appData');
-    let pageCards=data.cards;
     let typeID = req.params.typeID;
-    let newData = pageCards.filter(ele => ele.Type===typeID)
+    let newData = data.cards.filter(ele => ele.Type===typeID)
 
     if (newData){
         res.render('types',{
-            pageTitle:'Clash Royale Community',
             cards: newData,
             bodyClass:"types",
             pageID: typeID.toUpperCase()
