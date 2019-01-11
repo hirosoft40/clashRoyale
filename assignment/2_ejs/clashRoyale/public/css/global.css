@@ -16,7 +16,7 @@ nav{
     /* background-color: rgb(51, 157, 255); */
     color:#007bff !important;
     letter-spacing: 0.1rem;
-    font-size:20px;
+    font-size:18px;
     text-transform: uppercase;
 } 
 
@@ -28,5 +28,25 @@ nav{
 }
 
 .main{
-    padding-top:70px;
+    padding-top:90px;
+    padding-bottom:70px;
+}
+.footer{
+    /* margin-top:10px; */
+    background-color: #fff;
+    position:fixed;
+    left: 0;
+    bottom:0;
+    height:50px;
+    width:100%;
+    text-align: center;
+}
+footer > .container{
+    background-color: #fff;
+    /* position: relative; */
+    display: block;
+    color:#007bff;
+}
+.fontSize16{
+    font-size: 16px;
 }

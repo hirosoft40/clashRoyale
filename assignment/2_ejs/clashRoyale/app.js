@@ -21,7 +21,9 @@ app.use(require('./routes/cards'));
 app.use(require('./routes/types'));
 app.use(require('./routes/rarity'));
 app.use(require('./routes/arenas'));
-app.use(require('./routes/feedbacks'));
+app.use(require('./routes/feedback'));
+app.use(require('./routes/api'));
+
 
 
 // app.listen(app.get('port'),()=>

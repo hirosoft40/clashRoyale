@@ -3,6 +3,7 @@
 .index{
     background-image: url('/imgs/bg_imgs/bg_darkBlue.jpg');
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 .cards {
@@ -16,6 +17,9 @@
 }
 .arena {
     background-image: url('/imgs/bg_imgs/bg_green.png');
+}
+#submit{
+    margin: auto auto;
 }
 
 h1{
@@ -40,18 +44,23 @@ a:hover{
 }
 /* feedback page */
 .feedback{
+    height:auto;
     background-image: url('/imgs/bg_imgs/bg_field.jpg');
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 .blackLayover{
+    min-height:100vh;
     background-color: rgba(0, 0, 0,.4);
-    background-size:cover;
+    background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    height:800px;
 }
 .btn{
     letter-spacing: 0.1rem;
+    width:150px;
 }
 .form-group{
     margin-bottom: 20px;
@@ -60,9 +69,61 @@ a:hover{
 .feedbackTitle{
     text-align:center;
     text-transform: uppercase;
-    margin:40px 10px 20px 10px;
+    letter-spacing: 0.1rem;
 }
 #submit{
     padding:10px;
     
+}
+label{
+    letter-spacing:0.1rem;
+    text-transform: uppercase;
+}
+.divFeedback{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: .75rem;
+    border:10px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 2px 10px rgba(255, 255, 255,0.16), 0 3px 6px rgba(255, 255, 255,0.1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+    padding:10px;
+    max-width:500px;
+    color:rgb(63, 63, 63);
+}
+.divFeedback > p{
+    margin:0;
+    font-weight:bold;
+}
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+/* CHECKED STYLES */
+input[type=radio]:checked + i {
+    color:#007bff;    
+    background-color: transparent;
+  }
+input[type=radio] + i:hover {
+    color:#007bff;    
+    background-color: transparent;
+  }
+
+  input[type=radio]+i { 
+    cursor: pointer;
+    font-size:40px;
+    margin:0.3rem;
+    margin-left:0;
+  }
+.emojiClicked{
+    color:#007bff;    
+    background-color: transparent;
+}
+
+.delete:hover{
+    color:rgb(190, 0, 0) !important;
+}
+.edit:hover{
+    color:rgb(190, 0, 0) !important;
 }
