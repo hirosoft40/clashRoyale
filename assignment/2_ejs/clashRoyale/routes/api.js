@@ -52,4 +52,14 @@ router.delete('/api/delete/:id',(req, res)=>{
     res.json(feedbackData);
 })
 
+// // edit
+// router.get('/api/edit/:id',(req, res)=>{
+//     let id = req.body.id;
+//     res.render('feedback',{
+//         name: feedbackData[id][name],
+//         feeling:feedbackData[id][feeling],
+//         feedback: feedbackData[id][feedback]
+//     });
+// })
+
 module.exports = router;

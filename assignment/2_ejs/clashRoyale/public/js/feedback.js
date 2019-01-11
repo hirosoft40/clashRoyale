@@ -51,6 +51,15 @@ $(function () {
                 success: addNewData
             });
         }
+
+        if (e.target.classList.contains('fa-edit')) {
+            $.ajax({
+                url: '/api/edit/'+id,
+                type: 'POST',
+                success: addNewData
+            });
+        }
+
     });
 
     // ============
@@ -71,5 +80,7 @@ $(function () {
         $(".form-check-input").prop('checked', false)
 
     });
+
+    
 
 });
