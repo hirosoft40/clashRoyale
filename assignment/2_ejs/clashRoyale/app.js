@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const dataFile = require('./data/clashRoyaleData.json')
+const dataFile = require('./data/clashRoyaleData.json');
+
 
 app.set('port', process.env.PORT || 3500);
 app.set('appData', dataFile);

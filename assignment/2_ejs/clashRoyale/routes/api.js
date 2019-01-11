@@ -21,6 +21,9 @@ router.use(bodyParser.urlencoded({extended:false}));
 router.post('/api',(req, res)=>{
     // データを変数に追加
     feedbackData.unshift(req.body);
+    // console.log("(1) Without JSON.stringfy", feedbackData) // ==> SHOW DATA
+    // console.log("(2) JSON STRINGFY", JSON.stringify(feedbackData)) ==> everthing is ""
+    // console.log("(3) bodyparseer JSON",bodyParser.json(feedbackData)) ==> function Simply telling body parser to use json
 
     //ジェイソンファイルに書き出す
     // fs.writeFile(file, data[,options encoding 'utf8'], callback)
@@ -32,5 +35,21 @@ router.post('/api',(req, res)=>{
         // 新しいジェイソんファイルを書き出す
     res.json(feedbackData)
 });
+
+// router.get('/api/delete/:id', (req, res)=>{
+//     res.render(feedbackData[req.body.id])
+// })
+
+// delete route
+router.delete('/api/delete/:id',(req, res)=>{
+    // let id = req.body.id.substring(6);
+    feedbackData.splice(req.body.id,1);
+    fs.writeFile('data/feedback.json',JSON.stringify(feedbackData),err=>{
+        if(err){
+            console.error(err)
+        }
+    });
+    res.json(feedbackData);
+})
 
 module.exports = router;
