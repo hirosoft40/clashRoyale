@@ -58,7 +58,7 @@ a:hover{
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-.btn{
+.btn-primary{
     letter-spacing: 0.1rem;
     width:150px;
 }
@@ -87,6 +87,7 @@ label{
     font-family: Arial, Helvetica, sans-serif;
     font-size:14px;
     padding:10px;
+    margin:10px auto;
     max-width:500px;
     color:rgb(63, 63, 63);
 }

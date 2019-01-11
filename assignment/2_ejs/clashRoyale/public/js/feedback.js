@@ -1,6 +1,19 @@
 $(function(){
+
+    const addNewData= (data)=>{
+        var output ='';
+        $.each(data, (key, item)=>{
+            output += "<div class='divFeedback'>";
+            output += "<span class='delete fontSize14 float-right text-dark mx-2' id='delete"+key+"'><i class='fas fa-trash-alt'></i></span>"
+            output += "<span class='edit fontSize14 float-right text-dark mx-2' id='edit"+key+"'><i class='fas fa-edit'></i></span>"
+            output += "<h5><span class='displayName mb-2'>"+item.name+"</span>"+"<i class='far ml-2 "+item.feeling+"'></i></h5>";
+            output += "<span class='displayFeedback'>"+item.feedback+"</span></div>";
+        });
+        $('#apiStart').html(output);
+    }
+
     // select emoji
-    $(".emoji").on('click',(e)=>{
+    $(".emoji").on('click', e =>{
         $(".emoji").removeClass('emojiClicked');
         $(".form-check-input").prop('checked',false)
         e.target.classList.add('emojiClicked');
@@ -21,30 +34,29 @@ $(function(){
     // 入力値のチェック
    // apiにポスト
    // OK => display on webpage
+   $('.feedback-messages').on('click', function(e) {
+        if (e.target.className == 'glyphicon glyphicon-remove') {
+        $.ajax({
+            url: 'api/' + e.target.id,
+            type: 'DELETE',
+            success: updateFeedback
+        }); //ajax
+        } // the target is a delete button
+    }); //feedback messages
+
+
 
     $('.formFeedback').submit(e =>{
+
+        alert('hehe')
+        console.log(e);
         e.preventDefaut();
         $.post('api',{
             name: $('#inputName').val(),
             feeling: $("input[type='radio':checked").val(),
-            message:$('#inputTextarea').val()
-        
+            message:$('#inputTextarea').val()  
        }, addNewData);
     });
-
-    const addNewData= (data)=>{
-        var output ='';
-        $.each(data, (key, item)=>{
-            output += "<div class='divFeedback'>";
-            output += "<span class='delete fontSize16 float-right text-dark mx-2' id='delete"+key+"'><i class='fas fa-trash-alt'></i></span>"
-            output += "<span class='edit fontSize16 float-right text-dark mx-2' id='edit"+key+"'><i class='fas fa-edit></i></span>"
-
-            output += "<h5><span class='displayName mb-2'>"+item.name+"</span>"+"<i class='far ml-2 "+item.feeling+"'></i></h5>";
-            output += "<span class='displayFeedback'>"+item.feedback+"</span></div>";
-        });
-        
-        $('#apiStart').html(output);
-    }
     // ============
     //delete処理する
 

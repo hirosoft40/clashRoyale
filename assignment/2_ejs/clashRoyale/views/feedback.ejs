@@ -4,10 +4,13 @@
     <% include partials/header.ejs %>
     <section class="main blackLayover">
         <div class='container'>
-            <div class="row mt-1 mt-lg-5 mt-md-3 d-flex justify-content-around">
+            <div class="row mt-1 mt-md-3 d-flex justify-content-around">
                 <div class="col-12 col-md-5 p-lg-1 p-md-2 p-sm-1">
                     <h2 class='feedbackTitle'>Send us Feedback</h2>
-                    <form class='formFeedback' method="POST" action='/api'>
+                    
+                    <form class='formFeedback'>
+                        <!-- <form class='formFeedback' method="POST" action='/api'> -->
+
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id='inputName' class="form-control" name='name' aria-describedby="name" placeholder="Your name">
@@ -67,8 +70,8 @@
                         <!-- <h2 class='feedbackTitle'>Send us Feedback</h2> -->
                         <div class='ml-0 ml-lg-5 ml-md-3' id='apiStart'>
                             <div class="divFeedback">
-                                <span class='delete fontSize16 float-right text-dark mx-2' id='delete'><i class="fas fa-trash-alt"></i></span>
-                                <span class='edit fontSize16 float-right text-dark mx-2' id='edit'><i class="fas fa-edit"></i></span>
+                                <span class='delete fontSize14 float-right text-dark mx-2' id='delete'><i class="fas fa-trash-alt"></i></span>
+                                <span class='edit fontSize14 float-right text-dark mx-2' id='edit'><i class="fas fa-edit"></i></span>
                                 <h5>
                                     <span class='displayName mb-2'>my name</span>
                                     <i class="far fa-sad-tear ml-2"></i>
@@ -77,9 +80,6 @@
 
                             </div>
                         </div>
-                            
-                            
-                        </li>
                     </ul>
                 
                     </form>            

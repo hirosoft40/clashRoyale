@@ -24,8 +24,9 @@ router.post('/api',(req, res)=>{
 
     //ジェイソンファイルに書き出す
     // fs.writeFile(file, data[,options encoding 'utf8'], callback)
-    fs.writeFile('data/feedback.json', JSON.stringify(feedbackData),err=>{
+    fs.writeFile('data/feedback.json', JSON.stringify(feedbackData),'utf8',err=>{
         if(err){
+            console.error(err);
         }
     });
         // 新しいジェイソんファイルを書き出す
