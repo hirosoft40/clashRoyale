@@ -7,6 +7,7 @@ router.get('/cards',(req, res)=>{
     
     res.render('cards',{
         cards: pageCards,
+        bodyClass:"cards",
         param:false,
         pageID:'All Cards'.toUpperCase()
     });
@@ -33,6 +34,7 @@ router.get('/cards/:cardsID',(req, res)=>{
     
     res.render('cards',{
         cards: pageCards[cardsIndex],
+        bodyClass:"cards",
         param:req.params.cardsID,
         pageID:pageCards[cardsIndex].Name.toUpperCase()
     });

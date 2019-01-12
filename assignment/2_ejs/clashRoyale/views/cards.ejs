@@ -1,9 +1,9 @@
 <% include partials/head.ejs %>
-<body class='cards'>
+<body class=<%=bodyClass %>>
     <% include partials/header.ejs %>
     <section class="main">
         <div class='container '>
-            <h1> <%= pageID %></h1>
+            <h1 class="mt-1 mt-md-3 d-flex justify-content-around"> <%= pageID %></h1>
             <% if (param){ %>
             <div class ='row mb-5 d-flex'>
                 <div class ='col text-right mt-0 mr-5 order-2 order-md-1"'>

@@ -15,8 +15,9 @@ router.get('/arenas/:arenaID/',(req, res)=>{
     let newData = data.cards.filter(ele => ele.Arena.split(" ").join("")===arenaID);
 
     if (newData){
-        res.render('types',{
+        res.render('cards',{
             cards: newData,
+            param:false,
             bodyClass:"arena",
             pageID: arenaID.toUpperCase()
         });

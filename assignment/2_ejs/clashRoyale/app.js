@@ -24,6 +24,8 @@ app.use(require('./routes/rarity'));
 app.use(require('./routes/arenas'));
 app.use(require('./routes/feedback'));
 app.use(require('./routes/api'));
+app.use(require('./routes/search'));
+
 
 
 

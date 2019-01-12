@@ -17,45 +17,40 @@
                         aria-haspopup="true" aria-expanded="false">
                         Cards
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu multi-level" role='menu' aria-labelledby="navbarDropdown">
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item" href="/types">Types</a>
+                            <ul class="dropdown-menu">
+                            <%uniqueType.forEach(item=>{%>
+                            <li><a class="dropdown-item" href="/types/<%=item%>">
+                                <%=item%></a></li>
+                            <%});%>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item" href="/rarity/">Rarity</a>
+                            <ul class="dropdown-menu">
+                            <%uniqueRarity.forEach(item=>{%>
+                            <li><a class="dropdown-item" href="/rarity/<%=item%>">
+                                <%=item%></a></li>
+                            <%});%>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item" href="/arenas/">Arena</a>
+                            <ul class="dropdown-menu">
+                            <%uniqueArena.forEach(item=>{%>
+                                <% let itemTrim = item.split(" ").join("")%>
+                            <li><a class="dropdown-item" href="/arenas/<%=itemTrim%>"><%=item%></a></li>
+                                <%});%>
+                            </ul>
+                        </li>
 
-                        <%uniqueType.forEach(item=>{%>
-                        <a class="dropdown-item" href="/types/<%=item%>">
-                            <%=item%></a>
-                        <%});%>
+                    </ul>
+                </li>
 
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/cards">All Cards</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/cards" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Rarity
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <%uniqueRarity.forEach(item=>{%>
-                        <a class="dropdown-item" href="/rarity/<%=item%>">
-                            <%=item%></a>
-                        <%});%>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/cards">All Cards</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/cards" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Arena
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <%uniqueArena.forEach(item=>{%>
-                        <% let itemTrim = item.split(" ").join("")%>
-                        <a class="dropdown-item" href="/arenas/<%=itemTrim%>"><%=item%></a>
-                        <%});%>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/cards">All Cards </a>
-                    </div>
-                </li>
+
+
                 <li class="nav-item">
                     <a class="nav-link" href="/feedback">Feedback <i class="far fa-comment-dots"></i></a>
                 </li>
@@ -68,9 +63,13 @@
                 </li> -->
 
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search Cards" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            <div class="alert text-danger fade in">
+                    test
+                </div>
+                  
+            <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+                <input class="form-control mr-sm-2" type="search" id ='inputSearch' placeholder="Search Cards" name='search' aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id='btnSearch'>Search</button>
             </form>
         </div>
     </nav>

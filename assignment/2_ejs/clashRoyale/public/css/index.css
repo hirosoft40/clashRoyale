@@ -22,11 +22,7 @@
     margin: auto auto;
 }
 
-h1{
-    text-align: center;
-    margin:50px;
-    font-size:60px;
-}
+
 
 .text{
     font-family: 'Lato', sans-serif;
@@ -132,3 +128,28 @@ input[type=radio] + i:hover {
 .edit:hover{
     color:rgb(190, 0, 0) !important;
 }
+
+  /* ================= */
+  /* ==title of each page=== */
+
+h1{
+    text-align: center;
+    margin:50px;
+}
+@media (min-width: 544px) {  
+    h1 {font-size: 40px;}
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {  
+    h1 {font-size: 60px;}
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    h1 {font-size: 60px;}
+  }
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+    h1 {font-size: 70px;}
+  }

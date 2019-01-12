@@ -12,9 +12,10 @@ router.get('/types/:typeID/',(req, res)=>{
     let newData = data.cards.filter(ele => ele.Type===typeID)
 
     if (newData){
-        res.render('types',{
+        res.render('cards',{
             cards: newData,
             bodyClass:"types",
+            param:false,
             pageID: typeID.toUpperCase()
         });
     } else{
