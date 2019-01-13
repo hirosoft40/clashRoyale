@@ -1,9 +1,7 @@
 lecture/
 knowledge/
 .DS_Store
-assignment/0_node/node_modules/
-assignment/1_express/firstExpressApp/node_modules/
-assignment/1_express/clashRoyale/node_modules/
-assignment/1_express/clashRoyale/public/imgs/
+assignment/0_node/
+assignment/1_express/
 assignment/2_ejs/clashRoyale/public/imgs/
 assignment/2_ejs/clashRoyale/node_modules/
