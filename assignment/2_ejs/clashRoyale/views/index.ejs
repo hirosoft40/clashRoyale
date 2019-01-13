@@ -1,19 +1,93 @@
 <% include partials/head.ejs %>
-<body class=<%=bodyClass %>>
-    <% include partials/header.ejs %>
-    <section class="main index">
-        <!-- <div class='container'> -->
-        <!-- <iframe width="100%" height="500px" src="https://www.youtube.com/embed/SDaOmwaYDHw" 
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-            <div class="row d-flex justify-content-center">
-                <div class="col-8">
-                    <h1 class='text-center m-1 m-md-5'>
-                        CLASH ROYALE COMMUNITY
-                    </h1>
 
-                    <h3  class='text-center m-1 m-md-5'>I made this site as a part of a
-                        project through <a href='https://www.digitalcrafts.com/'>DigitalCraft</a> to learn Node.js and
-                        Express. You can refer to all Clash Royale cards from this website.</h3>
+<body class=<%=bodyClass %></body>>
+<% include partials/header.ejs %>
+<section class="container-fluid px-0">
+    <div class="index"></div>
+</section>
+<section class="container-fluid px-0">
+    <div class="carousel slide" data-ride="carousel" id="carouselVideo">
+        <div class="carousel-inner">
+            <div class="row m-3 m-lg-5 m-md-5">
+                <div class="col-12 col-md-6">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <iframe class='m-0 p-0' height="300" src="https://www.youtube.com/embed/SDaOmwaYDHw"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="https://www.youtube.com/channel/UC_F8DoJf9MZogEOU51TpTbQ">
+                                        <i class="fab fa-youtube mr-1 text-danger"></i>YouTube
+                                    </a>
+                                </h5>
+                            </div>
+                        </div> <!--end of card-->
+                    </div><!--end of carousel-->
+                    <div class="carousel-item">
+                        <div class="card">  
+                            <iframe class='m-0 p-0' height="300" src="https://www.youtube.com/embed/EW9ETqA1abI"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="https://www.youtube.com/channel/UC_F8DoJf9MZogEOU51TpTbQ">
+                                        <i class="fab fa-youtube mr-1 text-danger"></i>YouTube
+                                    </a>
+                                </h5>
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div> <!--end of card-->
+                    </div><!--end of carousel--> 
+                    <div class="carousel-item">
+                        <div class="card">
+                            <iframe class='m-0 p-0' height="300" src="https://www.youtube.com/embed/JtdvcMbN61s"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="https://www.youtube.com/channel/UC_F8DoJf9MZogEOU51TpTbQ">
+                                        <i class="fab fa-youtube mr-1 text-danger"></i>YouTube
+                                    </a>
+                                </h5>
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div> 
+                    <a class="carousel-control-prev" href="#carouselVideo" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselVideo" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div><!--  end of col-6 -->  
+            <div class="col-12 col-md-6 indexRight">
+                <p class='mainTitle'> be prepared for the battle</p>
+
+                <div class="indexText p-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorum animi inventore iusto sapiente eligendi, dignissimos, dolorem perferendis voluptas aspernatur rem, suscipit ullam error incidunt ipsam explicabo quibusdam aperiam laborum.
+
                 </div>
-            </div>
-            <% include partials/footer.ejs %>
+                <div class='d-flex justify-content-around'> 
+                    <div class="links">
+                        <a target='_blank' href="https://twitter.com/ClashRoyale?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="links">
+                        <a target='_blank' href='https://www.reddit.com/r/ClashRoyale'><i class="fab fa-reddit"></i> </a>
+                    </div>
+                    <div class="links">
+                        <a target='_blank' href="https://www.youtube.com/channel/UC_F8DoJf9MZogEOU51TpTbQ"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="links">
+                        <a target='_blank' href="http://clashroyale.wikia.com/wiki/Clash_Royale_Wiki"><i class="fab fa-wikipedia-w"></i></a>
+                    </div>
+                </div>
+            </div><!--  end of col-6 -->  
+        </div><!--  end of row -->
+
+        <% include partials/footer.ejs %>

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const dataFile = require('./data/clashRoyaleData.json');
+// const http = require('http').Server(app);
 
 
 app.set('port', process.env.PORT || 3500);
@@ -25,6 +26,7 @@ app.use(require('./routes/arenas'));
 app.use(require('./routes/feedback'));
 app.use(require('./routes/api'));
 app.use(require('./routes/search'));
+app.use(require('./routes/chat'));
 
 
 

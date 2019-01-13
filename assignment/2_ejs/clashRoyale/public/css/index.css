@@ -1,10 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Changa:700|Denk+One|Lato|Palanquin:700|Roboto|Ubuntu+Mono:700|Viga);
 
 /* background images */
 .index{
-    background-image: url('/imgs/bg_imgs/bg_darkBlue.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url('/imgs/bg_imgs/bg_index_2.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh; 
 }
 .cards {
     background-image: url('/imgs/bg_imgs/bg_blue.png');
@@ -18,8 +20,75 @@
 .arena {
     background-image: url('/imgs/bg_imgs/bg_green.png');
 }
+.feedback{
+    height:auto;
+    background-image: url('/imgs/bg_imgs/bg_field.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.blackLayover{
+    min-height:100vh;
+    background-color: rgba(0, 0, 0,.4);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* feedback page */
+.chat{
+    height:auto;
+    background-image: url('/imgs/bg_imgs/bg_loud.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
 
 
+/* index page */
+.mainTitle{
+    margin:0;
+    text-align: center;
+    font-size:2.7rem;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.card{
+    border-radius: 0.75rem;
+    max-width:100%;
+}
+.card-title > a{
+    color:rgb(63, 63, 63);
+}
+.carousel-item{
+    padding:0;
+}
+.iframe{
+    max-width: 100%;
+}
+.carousel-control-prev, .carousel-control-next, .carousel-control-prev-icon, .carousel-control-next-icon{
+    color: #007bff;
+    margin-top:50px;
+    max-height: 150px;
+}
+.indexRight{
+    margin:0;
+    padding:0;
+    background-color: #fff;
+    z-index: 5;
+    color:rgb(63, 63, 63);
+}
+.indexText{
+    font-family: 'Lato', sans-serif;
+    font-size:18px;
+    color:rgb(63, 63, 63);
+}
+.links i{
+    color:rgb(63, 63, 63);
+    font-size: 60px;
+}
+/* cards related page */
 .text{
     font-family: 'Lato', sans-serif;
     color:#fff
@@ -36,21 +105,6 @@ a:hover{
 }
 
 /* feedback page */
-.feedback{
-    height:auto;
-    background-image: url('/imgs/bg_imgs/bg_field.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
-.blackLayover{
-    min-height:100vh;
-    background-color: rgba(0, 0, 0,.4);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
 /* submit button */
 .btn-primary{ 
     letter-spacing: 0.1rem;
@@ -83,13 +137,13 @@ label{
     border-radius: .75rem;
     border:10px solid rgba(255, 255, 255, 0.03);
     box-shadow: 0 2px 10px rgba(255, 255, 255,0.16), 0 3px 6px rgba(255, 255, 255,0.1);
-    font-family: Arial, Helvetica, sans-serif;
     font-size:14px;
     /* overflow: visible;
     display:block;
     height:auto; */
     padding:10px;
     margin:10px auto;
+    font-family: Arial, Helvetica, sans-serif;
     color:rgb(63, 63, 63);
 }
 .divFeedback > p{
@@ -149,5 +203,3 @@ input[type=radio] + i:hover {
 .edit:hover{
     color:rgb(190, 0, 0) !important;
 }
-
-  /* ================= */
