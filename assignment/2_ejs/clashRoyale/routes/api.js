@@ -6,13 +6,14 @@ const bodyParser = require('body-parser');
 
 
 router.get('/api',(req, res)=>{
-    // res.json sends a JSON response that is the parameter converted to a JSON string using JSON.stringfy(). The parameter can be any JSON type, incluing object, array, string, Boolean, number, or null and you can add use it to convert other value to JSON.
+    // res.json sends a JSON response that is the parameter converted to a JSON string using JSON.stringfy(). 
+    // The parameter can be any JSON type, incluing object, array, string, Boolean, number, or null and you can add use it to convert other value to JSON.
     // res.json(null); res.status(500).json({error:'message'})
     res.json(feedbackData);
 });
 
-// telling system that I want to use json.
-router.use(bodyParser.json()); 
+
+router.use(bodyParser.json()); // telling system that I want to use json.
 
 // if false: telling system to use a simple algorithm for shallow parsing
 // if true: complex algorightm for parsing that can deal with nested objects
@@ -25,8 +26,7 @@ router.post('/api',(req, res)=>{
     // console.log("(2) JSON STRINGFY", JSON.stringify(feedbackData)) ==> everthing is ""
     // console.log("(3) bodyparseer JSON",bodyParser.json(feedbackData)) ==> function Simply telling body parser to use json
 
-    //ジェイソンファイルに書き出す
-    // fs.writeFile(file, data[,options encoding 'utf8'], callback)
+    //ジェイソンファイルに書き出す   fs.writeFile(file, data[,options encoding 'utf8'], callback)
     fs.writeFile('data/feedback.json', JSON.stringify(feedbackData),'utf8',err=>{
         if(err){
             console.error(err);
@@ -36,13 +36,9 @@ router.post('/api',(req, res)=>{
     res.json(feedbackData)
 });
 
-// router.get('/api/delete/:id', (req, res)=>{
-//     res.render(feedbackData[req.body.id])
-// })
 
 // delete route
 router.delete('/api/delete/:id',(req, res)=>{
-    // let id = req.body.id.substring(6);
     feedbackData.splice(req.body.id,1);
     fs.writeFile('data/feedback.json',JSON.stringify(feedbackData),err=>{
         if(err){
@@ -53,13 +49,19 @@ router.delete('/api/delete/:id',(req, res)=>{
 })
 
 // // edit
-// router.get('/api/edit/:id',(req, res)=>{
-//     let id = req.body.id;
-//     res.render('feedback',{
-//         name: feedbackData[id][name],
-//         feeling:feedbackData[id][feeling],
-//         feedback: feedbackData[id][feedback]
-//     });
-// })
+router.put('/api/edit/:id',(req, res)=>{
+     let id = req.params.id;
+     let fdbk = req.body.feedback;
+
+    feedbackData[id].feedback = fdbk;
+    //ジェイソンファイルに書き出す   fs.writeFile(file, data[,options encoding 'utf8'], callback)
+    fs.writeFile('data/feedback.json', JSON.stringify(feedbackData),'utf8',err=>{
+        if(err){
+            console.error(err);
+        }
+    });
+
+    res.json(feedbackData);
+})
 
 module.exports = router;

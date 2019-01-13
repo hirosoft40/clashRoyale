@@ -18,10 +18,6 @@
 .arena {
     background-image: url('/imgs/bg_imgs/bg_green.png');
 }
-#submit{
-    margin: auto auto;
-}
-
 
 
 .text{
@@ -38,6 +34,7 @@ h3 a{
 a:hover{
     color:red;
 }
+
 /* feedback page */
 .feedback{
     height:auto;
@@ -54,14 +51,14 @@ a:hover{
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-.btn-primary{
+/* submit button */
+.btn-primary{ 
     letter-spacing: 0.1rem;
     width:150px;
+    margin: auto auto;
+    padding:10px;
 }
-.btn-success{
-    letter-spacing: 0.1rem;
-    width:150px;
-}
+/* feedback forms */
 .form-group{
     margin-bottom: 20px;
     padding:10px;
@@ -71,13 +68,15 @@ a:hover{
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
-#submit{
-    padding:10px;
-    
-}
+
 label{
     letter-spacing:0.1rem;
     text-transform: uppercase;
+}
+/* display feedbacks */
+#apiStart{
+    overflow: auto;
+    display:block;
 }
 .divFeedback{
     background-color: rgba(255, 255, 255, 0.7);
@@ -86,9 +85,11 @@ label{
     box-shadow: 0 2px 10px rgba(255, 255, 255,0.16), 0 3px 6px rgba(255, 255, 255,0.1);
     font-family: Arial, Helvetica, sans-serif;
     font-size:14px;
+    /* overflow: visible;
+    display:block;
+    height:auto; */
     padding:10px;
     margin:10px auto;
-    max-width:500px;
     color:rgb(63, 63, 63);
 }
 .divFeedback > p{
@@ -101,6 +102,22 @@ label{
     width: 0;
     height: 0;
   }
+
+/* comment edit */
+.editingName, .editingFeedback{
+    max-width:300px;
+    background-color: #fff;
+    border-radius:.3rem;
+    padding:5px;
+    font-size:14px;
+    outline:none;
+    overflow: auto;
+    }
+.editingFeedback{
+    display: block;
+    width:600px;
+    height:30px;
+}
 /* CHECKED STYLES */
 input[type=radio]:checked + i {
     color:#007bff;    
@@ -113,13 +130,17 @@ input[type=radio] + i:hover {
 
   input[type=radio]+i { 
     cursor: pointer;
-    font-size:40px;
-    margin:0.3rem;
+    font-size:2.4rem;
     margin-left:0;
   }
 .emojiClicked{
     color:#007bff;    
     background-color: transparent;
+}
+.radioButtons{
+    margin:0;
+    padding:0;
+    width:100%
 }
 
 .delete:hover{
@@ -130,26 +151,3 @@ input[type=radio] + i:hover {
 }
 
   /* ================= */
-  /* ==title of each page=== */
-
-h1{
-    text-align: center;
-    margin:50px;
-}
-@media (min-width: 544px) {  
-    h1 {font-size: 40px;}
-  }
-
-  /* Medium devices (tablets, 768px and up) */
-  @media (min-width: 768px) {  
-    h1 {font-size: 60px;}
-  }
-
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) { 
-    h1 {font-size: 60px;}
-  }
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {  
-    h1 {font-size: 70px;}
-  }

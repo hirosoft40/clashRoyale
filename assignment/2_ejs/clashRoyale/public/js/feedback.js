@@ -1,21 +1,47 @@
 $(function () {
 
-     // ============
-    //  function to add new data
-    // ============
+// === function to add new data
     const addNewData = data => {
         var output = '';
         $.each(data, (key, item) => {
             output += "<div class='divFeedback' id="+key+">";
             output += "<span class='delete fontSize14 float-right text-dark mx-2'><i class='fas fa-trash-alt' id='delete" + key + "'></i></span>"
             output += "<span class='edit fontSize14 float-right text-dark mx-2'><i class='fas fa-edit' id='edit" + key + "'></i></span>"
-            output += "<h5><span class='displayName mb-2'>" + item.name + "</span>" + "<i class='far ml-2 " + item.feeling + "'></i></h5>";
-            output += "<span class='displayFeedback'>" + item.feedback + "</span></div>";
+            output += "<h5><span class='sName mb-2' id='sName" + key + "' contentEditable = 'false'>" + item.name + "</span>" + "<i class='far ml-2 " + item.feeling + "'></i></h5>";
+            output += "<div class='divFeedbk d-flex ' id='divFeedbk" + key + "' contentEditable = 'false'>"+ item.feedback + "</div></div>";
         });
         $('#apiStart').html(output);
     }
 
-    // select emoji
+    
+// === function to EDIT new data
+    const editFeedback = e => {
+        let edFeedbk = e.target.parentNode.nextSibling.nextSibling;
+        edFeedbk.contentEditable = true;
+        edFeedbk.classList.add('editingFeedback')
+        edFeedbk.focus();
+
+        let editID = edFeedbk.id.substring(9);
+
+        $(edFeedbk).on('keypress',function(event){
+            if(event.which === 13){
+                let textContent = $(edFeedbk).text();
+                $(this).html('');
+                $(this).text(textContent);
+                edFeedbk.contentEditable = false;
+                edFeedbk.classList.remove('editingFeedback');   
+
+                $.ajax({
+                    url: '/api/edit/'+editID,
+                    data:{"feedback":textContent},
+                    type: 'PUT',
+                    success: addNewData
+                });                       
+            } // end of if
+        }); // end of enter (on keypress)    
+    };
+
+// === enable radio button behind emojis.
     $(".emoji").on('click', e => {
         $(".emoji").removeClass('emojiClicked');
         $(".form-check-input").prop('checked', false)
@@ -33,41 +59,13 @@ $(function () {
     // jQuery.post(url_destination[, data][, success][,dataType])
     // dat === a plain object or string that ise sent to the server with the request.
     // success === a callback function that is executed if the request succeeds. Required if dataType is provided, but can be null in that case.
-    // デフォルトの処理を回避
-    // 入力値のチェック
-    // apiにポスト
-    // OK => display on webpage
+     
 
-    // ============
-    //  delete
-    // ============
-    $("#apiStart").on("click", e => {
-        let id = e.target.id.substring(6);
-
-        if (e.target.classList.contains('fa-trash-alt')) {
-            $.ajax({
-                url: '/api/delete/'+id,
-                type: 'DELETE',
-                success: addNewData
-            });
-        }
-
-        if (e.target.classList.contains('fa-edit')) {
-            $.ajax({
-                url: '/api/edit/'+id,
-                type: 'POST',
-                success: addNewData
-            });
-        }
-
-    });
-
-    // ============
-    //  submit form
-    // ============
+// === Submit Feedback Form.
     $('.formFeedback').submit(e => {
-        e.preventDefault();
-        $.post('api/', {
+        e.preventDefault();         // デフォルトの処理を回避    
+                                    // 入力値のチェック
+        $.post('api/', {            // apiにポスト
             name: $('#inputName').val(),
             feeling: $("input[type='radio']:checked").val(),
             feedback: $('#inputTextarea').val()
@@ -81,6 +79,23 @@ $(function () {
 
     });
 
-    
+// === Delete Feedback Form.
+    $("#apiStart").on("click", e => {
+        let id = e.target.id.substring(6);
 
-});
+        if (e.target.classList.contains('fa-trash-alt')) {
+            $.ajax({
+                url: '/api/delete/'+id,
+                type: 'DELETE',
+                success: addNewData
+            });
+        }
+        e.stopPropagation();
+
+        // === edit Feedback.
+        if (e.target.classList.contains('fa-edit')) {
+            editFeedback(e)
+        } // end of edit div
+    }); // end of feedback
+
+}); // end of jQuery

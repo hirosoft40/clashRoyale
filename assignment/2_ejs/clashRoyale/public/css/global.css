@@ -10,6 +10,8 @@ body{
     color:white;
 }
 
+/* == NAV === */
+
 nav{
     font-family: 'Changa', sans-serif; 
     background-color: #fff;
@@ -106,4 +108,28 @@ footer > .container{
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
+  }
+
+/* ==title of each page=== */
+
+h1{
+    text-align: center;
+    margin:50px;
+}
+@media (min-width: 544px) {  
+    h1 {font-size: 40px;}
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {  
+    h1 {font-size: 60px;}
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    h1 {font-size: 60px;}
+  }
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+    h1 {font-size: 70px;}
   }
