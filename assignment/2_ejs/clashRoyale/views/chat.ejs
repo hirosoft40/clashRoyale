@@ -2,7 +2,7 @@
 
 <body class=<%=bodyClass %>>
     <% include partials/header.ejs %>
-    <section class="main blackLayover">
+    <section class="main">
         <div class='container'>
             <div class="row mt-1 mt-md-3 d-flex justify-content-around">
 
@@ -16,11 +16,9 @@
 
                             <button type="submit" class="btn" id="chatButton">LET'S CHAT</button>
                         <div class="chatWindow">
-                            <div class='output bg-light' id='chatBoard'></div>
-                            <div id='typing'></div>
+                            <div id='typing'> </div>
+                            <div class='output' id='chatBoard'></div>
                         </div>
-
-
                     </div>
                 </div>
             </div>

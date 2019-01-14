@@ -34,6 +34,7 @@ $(function(){
     $('#typing').html('');
     let $p =$("<p>");
     let $s = $("<span>",{"class":"msg"});
+    // let $div = $("<div>",{"class":"typing"})
 
     if($("#chatName").val() === data.handleName){
       $p.addClass("myChat")
@@ -43,9 +44,10 @@ $(function(){
     $s.append(data.message)
     $p.append("<strong>"+data.handleName +":</strong>").append($s);
     $("#chatBoard").prepend($p);
+
   });
 
-
+// listening on other people's typing
   socket.on('typing', data=>{
     $("#typing").html('<p><em>'+data+'is typing a message...</em></p>');
   });
