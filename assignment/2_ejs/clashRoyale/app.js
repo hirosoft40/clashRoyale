@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
 const dataFile = require('./data/clashRoyaleData.json');
-// const http = require('http').Server(app);
+const socket = require('socket.io');
 
+// const http = require('http').Server(app);
+const server = app.listen(3500, function(){
+    console.log('Listening on port 3500.')
+})
 
 app.set('port', process.env.PORT || 3500);
 app.set('appData', dataFile);
@@ -16,8 +20,10 @@ app.locals.uniqueType = [...new Set(dataFile.cards.map(item => item.Type))];
 app.locals.uniqueRarity = [...new Set(dataFile.cards.map(item => item.Rarity))];
 app.locals.uniqueArena = [...new Set(dataFile.cards.map(item => item.Arena.trim()))];
 
-
+// Static files
 app.use(express.static('public'));
+
+// routes
 app.use(require('./routes/index'));
 app.use(require('./routes/cards'));
 app.use(require('./routes/types'));
@@ -29,12 +35,19 @@ app.use(require('./routes/search'));
 app.use(require('./routes/chat'));
 
 
+const io  = socket(server);
+// io.attach(server);
+io.on('connection', function(socket) {
+    console.log('made socket connetcion', socket.id)
 
+    // handle chat event
+    socket.on("chat", data => {
+        // all ppls connected to sockets server
+        io.sockets.emit('chat',data);
+    })
 
+    socket.on('typing', data =>{
+        socket.broadcast.emit('typing', data)
+    })
 
-// app.listen(app.get('port'),()=>
-//     console.log(`Listening on port ${app.get('port')}`)
-// );
-app.listen(3500,()=>{
-    console.log('Listening on port 3500.')
 });
