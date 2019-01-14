@@ -14,21 +14,34 @@ $(function(){
     $("#chatMessage").focus();
   });
 
+
   $("#chatMessage").keypress(e => {
-    socket.emit('typing',$("#chatName").val())
+    // enter
+    if(e.which === 13){
+      socket.emit('chat',{
+        message: $("#chatMessage").val(),
+        handleName: $("#chatName").val()
+      });
+      $("#chatMessage").val('');
+      $("#chatMessage").focus();
+    } else{
+      socket.emit('typing',$("#chatName").val())
+    }
   });
 
 // listen on events
   socket.on('chat',data =>{
     $('#typing').html('');
-    let $p =$("<p>",{"class":"pr-2"});
+    let $p =$("<p>");
+    let $s = $("<span>",{"class":"msg"});
 
     if($("#chatName").val() === data.handleName){
-      $p.addClass("text-primary")
+      $p.addClass("myChat")
     }else{
-      $p.addClass("text-warning");
+      $p.addClass("yourChat")
     };
-    $p.append("<strong>"+data.handleName +":</strong><span class='msg'>"+data.message +"</span>");
+    $s.append(data.message)
+    $p.append("<strong>"+data.handleName +":</strong>").append($s);
     $("#chatBoard").prepend($p);
   });
 

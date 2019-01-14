@@ -218,9 +218,8 @@ input[type=radio] + i:hover {
     height:50px;
     border-bottom: 1px solid #012449;
 }
-#chatName:focus, #chatMessage:focus{
+#chatName:focus, #chatMessage:focus, #chatButton:focus{
     box-shadow: none;
-
 }
 
 #chatButton{
@@ -231,18 +230,39 @@ input[type=radio] + i:hover {
     padding:10px;
     background-color:#007bff;  
     border-bottom: 1px solid #012449;
-    color:#012449;
+    /* color:#012449; */
+    color: #fff;
 }
 #chatBoard{
     color:rgb(63, 63, 63);
+    padding:2px;
     background-color: rgb(192, 192, 192);
     font-size:16px;
     font-family: 'Lato', sans-serif;
 }
 #chatBoard strong{
-    color:#007bff;
+    /* color:#007bff; */
     margin-right:4px;
+}
+.msg{
+    font-weight: none;
 }
 #typing{
     color:gray;
+}
+.myChat{
+    max-width:80%;
+    background-color: #012449;
+    border-radius: 0.5rem;
+    border: 1px solid #012449;
+    color:white;
+    padding:2px;
+}
+.yourChat{
+    padding:2px;
+    max-width:80%;
+    background-color: #a6d1ff;
+    border-radius: 0.5rem;
+    border: 1px solid #a6d1ff;
+    color:rgb(63, 63, 63);
 }
