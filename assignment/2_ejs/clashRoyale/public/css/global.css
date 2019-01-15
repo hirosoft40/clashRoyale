@@ -16,7 +16,7 @@ nav{
     font-family: 'Changa', sans-serif; 
     background-color: #fff;
     /* background-color: rgb(51, 157, 255); */
-    color:#007bff !important;
+    /* color:#007bff !important; */
     letter-spacing: 0.1rem;
     font-size:18px;
     text-transform: uppercase;
@@ -27,6 +27,8 @@ nav{
 }
 .nav-item{
     margin-right:10px;
+    color:rgb(63, 63, 63) !important;
+
 }
 
 .main{

@@ -32,18 +32,21 @@ $(function(){
 // listen on events
   socket.on('chat',data =>{
     $('#typing').html('');
-    let $p =$("<p>");
-    let $s = $("<span>",{"class":"msg"});
-    // let $div = $("<div>",{"class":"typing"})
+    let $p =$("<p>",{"class":"text-wrap"});
+    // let $s = $("<span>",{"class":"msg"});
+    let $div = $("<div>",{"class":"d-flex px-1"})
 
     if($("#chatName").val() === data.handleName){
-      $p.addClass("myChat")
+      $div.addClass("justify-content-start");
+      $p.addClass("myChat");
     }else{
-      $p.addClass("yourChat")
+      $div.addClass("justify-content-end");
+      $p.addClass("yourChat");
     };
-    $s.append(data.message)
-    $p.append("<strong>"+data.handleName +":</strong>").append($s);
-    $("#chatBoard").prepend($p);
+    // $s.append(data.message)
+    $p.append("<strong>"+data.handleName +":</strong>"+data.message)
+    $div.append($p);
+    $("#chatBoard").prepend($div);
 
   });
 
