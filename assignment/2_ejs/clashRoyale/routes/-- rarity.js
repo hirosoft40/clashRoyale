@@ -9,7 +9,6 @@ router.get('/rarity', (req, res)=>{
 router.get('/rarity/:rarityID/',(req, res)=>{
     let data = req.app.get('appData');
     let rarityID = req.params.rarityID;
-
     let newData = data.cards.filter(ele => ele.Rarity===rarityID)
     if (newData){
         res.render('cards',{

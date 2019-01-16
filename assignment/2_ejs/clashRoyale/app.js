@@ -27,12 +27,12 @@ app.use(express.static('public'));
 app.use(require('./routes/index'));
 app.use(require('./routes/cards'));
 app.use(require('./routes/types'));
-app.use(require('./routes/rarity'));
-app.use(require('./routes/arenas'));
-app.use(require('./routes/feedback'));
 app.use(require('./routes/api'));
 app.use(require('./routes/search'));
-app.use(require('./routes/chat'));
+// app.use(require('./routes/chat'));
+// app.use(require('./routes/rarity'));
+// app.use(require('./routes/arenas'));
+// app.use(require('./routes/feedback'));
 
 
 const io  = socket(server);
