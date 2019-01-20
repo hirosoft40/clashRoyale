@@ -20,6 +20,13 @@
 .arena {
     background-image: url('/imgs/bg_imgs/bg_green.png');
 }
+.error {
+    background-image: url('/imgs/bg_imgs/bg_darkBlue.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
 .feedback{
     height:auto;
     background-image: url('/imgs/bg_imgs/bg_field.jpg');
@@ -38,7 +45,7 @@
 /* feedback page */
 .chat{
     height:auto;
-    background-image: url('/imgs/bg_imgs/bg_darkBlue.jpg');
+    background-image: url('/imgs/bg_imgs/bg_loud.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -262,13 +269,14 @@ input[type=radio] + i:hover {
 }
 .chatWindow{
     /* background-color: rgb(235, 235, 235); */
-    background-color: transparent;
+    background-color: #fff;
+    border-radius: 0.75rem;
     display:flex;
     flex-direction: column;
 }
 .yourChat{
-    color:#222222;
-    background-color: #a6d1ff;
+    color:#eee;
+    background-color: #053261;
     max-width:80%;
     border-radius: 0.5rem;
     margin:2px;
@@ -283,4 +291,11 @@ input[type=radio] + i:hover {
     margin:0;
     padding:10px;
     color:gray;
+}
+.chatTitle{
+    color:#111;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+    text-align:center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }

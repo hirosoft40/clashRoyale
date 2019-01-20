@@ -1,24 +1,26 @@
 const express = require('express');
 const app = express();
-const dataFile = require('./data/clashRoyaleData.json');
+// const dataFile = require('./data/json/clashRoyaleData.json');
 const socket = require('socket.io');
+const db = require('./models/')
 
-// const http = require('http').Server(app);
+const http = require('http').Server(app);
 const server = app.listen(3500, function(){
     console.log('Listening on port 3500.')
 })
 
 app.set('port', process.env.PORT || 3500);
-app.set('appData', dataFile);
+// app.set('appData', dataFile);
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-
 // header info
 app.locals.pageTitle = 'Clash Royale Community';
-app.locals.uniqueType = [...new Set(dataFile.cards.map(item => item.Type))];
-app.locals.uniqueRarity = [...new Set(dataFile.cards.map(item => item.Rarity))];
-app.locals.uniqueArena = [...new Set(dataFile.cards.map(item => item.Arena.trim()))];
+
+// NAV bar
+db.types.findAll({attributes: ['name']}).then(data=> {app.locals.uniqueType = [...new Set(data.map(item => item.name))]})
+db.rarities.findAll({attributes: ['name']}).then(data=>{app.locals.uniqueRarity = [...new Set(data.map(item => item.name))]})
+db.arenas.findAll({attributes: ['name']}).then(data=>{app.locals.uniqueArena = [...new Set(data.map(item => item.name))]})
 
 // Static files
 app.use(express.static('public'));
@@ -29,11 +31,8 @@ app.use(require('./routes/cards'));
 app.use(require('./routes/types'));
 app.use(require('./routes/api'));
 app.use(require('./routes/search'));
-// app.use(require('./routes/chat'));
-// app.use(require('./routes/rarity'));
-// app.use(require('./routes/arenas'));
-// app.use(require('./routes/feedback'));
 
+// 
 
 const io  = socket(server);
 // io.attach(server);

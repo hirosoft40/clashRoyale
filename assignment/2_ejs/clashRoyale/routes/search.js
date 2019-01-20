@@ -1,23 +1,39 @@
 const express = require('express');
 const router = express.Router();
+const db = require('../models/');
+const Sequelize = require('sequelize');
 
 router.get('/search',(req, res)=>{
-    let data = req.app.get('appData');
-    let searchID = req.query.search;
-    let newData = data.cards.filter(item => {
-        let letters = item.Name.toLowerCase();
-        return letters.includes(searchID.toLowerCase())});
+    let searchID = req.query.search
 
-    if (newData){
-        res.render('cards',{
-            cards: newData,
-            param:false,
-            bodyClass:"rarity",
-            pageID: "search results".toUpperCase()
-        });
-    } else{
-        res.redirect('/cards');        // if error, go back to all cards
-    }  
+    //error handling
+    // if (parseInt(searchID)) res.send('URL Error: Please type in Card Name that you want to search.'); 
+
+    db.cards.findAll({
+        include: [
+        {model:db.types,required:true}
+        , { model:db.rarities,requiredx:true}
+        , { model:db.arenas,required:true}
+        , { model:db.elixircosts, required:true
+        }]
+        ,where: {
+            name: {[Sequelize.Op.iLike]: `%${searchID}%`}
+          }
+    }).then(results => {
+        if (results.length>0){
+            res.render('cards',{
+                cards: results,
+                bodyClass:"rarity",
+                param:false,
+                pageID: "search results".toUpperCase()
+            });
+        } else{
+            res.render('error',{
+                bodyClass:"error",
+                param:false,
+                pageID: "No results found".toUpperCase()
+            });        }  
+    });
 });
 
 module.exports = router;

@@ -1,14 +1,14 @@
 
 <div class='row mb-5 d-flex'>
     <div class='col text-right mt-0 mr-5 order-2 order-md-1"'>
-        <img class='align-self-start' src='/imgs/cards/<%= ele.Artwork%>'>
+        <img class='align-self-start' src='/imgs/cards/<%= ele.img_url%>'>
     </div>
     <div class="word col order-1 order-md-2 ">
-        <h3><a href='/cards/<%= ele.Name %>'><%= ele.Name.toUpperCase() %></a></h3>
-        <p>Type: <span class='text'> <a href='/types/<%= ele.Type %>/'><%= ele.Type %></a></span></p>
-        <p>Elixir Cost: <span class='text'><%= ele.ElixirCost %></span></p>
-        <p>Rarity: <span class='text'><a href='/rarity/<%= ele.Rarity %>/'><%= ele.Rarity %></a></span></p>
-        <p>Arena: <span class='text'><a href='/arenas/<%= ele.Arena.split(" ").join("") %>/'><%= ele.Arena %></a></span></p>
-        <p class='text'><%= ele.Summary %></p>
+        <h3><a href='/cards/<%= ele.id %>'><%= ele.name.toUpperCase() %></a></h3>
+        <p>Type: <span class='text'> <a href='/types/<%= ele.type.name %>/'><%= ele.type.name%></a></span></p>
+        <p>Elixir Cost: <span class='text'><%= ele.elixircost.name %></span></p>
+        <p>Rarity: <span class='text'><a href='/rarity/<%= ele.rarity.name %>/'><%= ele.rarity.name %></a></span></p>
+        <p>Arena: <span class='text'><a href='/arenas/<%= ele.arena.name.split(" ").join("") %>/'><%= ele.arena.name %></a></span></p>
+        <p class='text'><%= ele.summary %></p>
     </div>
 </div>

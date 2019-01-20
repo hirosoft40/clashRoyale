@@ -1,28 +1,12 @@
 <% include partials/head.ejs %>
 <body class=<%=bodyClass %>>
+    
     <% include partials/header.ejs %>
     <section class="main">
         <div class='container '>
             <h1 class="mt-1 mt-md-3 d-flex justify-content-around"> <%= pageID %></h1>
-            <% if (param){ %>
-            <div class ='row mb-5 d-flex'>
-                <div class ='col text-right mt-0 mr-5 order-2 order-md-1"'>
-                    <img class='align-self-start'src = '/imgs/cards/<%= cards.Artwork%>'>
-                </div>
-                <div class="word col order-1 order-md-2 ">
-                    <h3> <%= cards.Name.toUpperCase() %></a></h3>
-                    <p>Type: <span class='text'> <a href='/types/<%= cards.Type %>/'><%= cards.Type %></a></span></p>
-                    <p>Elixir Cost: <span class='text'><%= cards.ElixirCost %></span></p>
-                    <p>Rarity: <span class='text'><a href='/rarity/<%= cards.Rarity %>/'><%= cards.Rarity %></a></span></p>
-                    <p>Arena: <span class='text'><a href='/arenas/<%= cards.Arena.split(" ").join("") %>/'><%= cards.Arena %></a></span></p>
-                    <p class='text'><%= cards.Summary %></p>
-                    
-                </div>
-            </div>
-            <% }else{ %>
                 <% cards.forEach(ele =>{%>
-
                 <% include partials/categories.ejs %>
-            <% })}; %>
+            <% }); %>
         </div>
         <% include partials/footer.ejs %>
