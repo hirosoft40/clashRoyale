@@ -11,20 +11,17 @@ router.get('/api',(req, res)=>{
     // The parameter can be any JSON type, incluing object, array, string, Boolean, number, or null and you can add use it to convert other value to JSON.
     // res.json(null); res.status(500).json({error:'message'})
     // res.json(feedbackData);
-
     db.feedbacks.findAll({
-        include: [db.feelings]
-}).then(results => {
-    // console.log(results[0])
-        res.render('feedback',{
-            cards: results,
-            bodyClass:"cards",
-            param:false,
-            pageID:'All Cards'.toUpperCase()
-        });
+        attributes:['id','name','feedback','feeling.icon']
+        ,order: [['id', 'DESC']]
+        ,include: [{
+            model:db.feelings,
+            required:true
+        }]
+    }).then(results => {
+            res.json(results)
     });
 });
-
 
 
 // router.use(bodyParser.json()); // telling system that I want to use json.
@@ -34,9 +31,27 @@ router.get('/api',(req, res)=>{
 router.use(bodyParser.urlencoded({extended:false}));
 
 router.post('/api',(req, res)=>{
+    let icon = !(req.body.icon) ? null : parseInt(req.body.icon);
 
-
-
+    db.feedbacks.create({name:req.body.name, feedback:req.body.feedback, icon_id:icon})
+    .then(results => {
+        // console.log(data.get({plain: true}))
+        db.feedbacks.findAll({
+            attributes:['id','name','feedback','feeling.icon']
+            ,order: [['id', 'DESC']]
+            ,include: [{
+                model:db.feelings,
+                required:true
+                }]
+        })
+        .then(results => {
+                res.json(results)
+        });
+    })
+    .catch(error => {
+        console.error(`Error Message: ${error}`)
+    })
+});
 
     // データを変数に追加
     // feedbackData.unshift(req.body);
@@ -52,34 +67,74 @@ router.post('/api',(req, res)=>{
     // });
     //     // 新しいジェイソんファイルを書き出す
     // res.json(feedbackData)
-});
+
 
 
 // delete route
 router.delete('/api/delete/:id',(req, res)=>{
-    feedbackData.splice(req.body.id,1);
-    fs.writeFile('data/json/feedback.json',JSON.stringify(feedbackData),err=>{
-        if(err){
-            console.error(err)
-        }
-    });
-    res.json(feedbackData);
+    let paramId = parseInt(req.params.id);
+    db.feedbacks.destroy({
+        where:{id: {[Sequelize.Op.eq]: paramId}}
+        })
+    .then(results => {
+        // console.log(data.get({plain: true}))
+        db.feedbacks.findAll({
+            attributes:['id','name','feedback','feeling.icon']
+            ,order: [['id', 'DESC']]
+            ,include: [{
+                model:db.feelings,
+                required:true
+                }]
+        })
+        .then(results => {
+                res.json(results)
+        });
+    })
+    .catch(error => {
+        console.error(`Error Message: ${error}`)
+    })
+    // fs.writeFile('data/json/feedback.json',JSON.stringify(feedbackData),err=>{
+    //     if(err){
+    //         console.error(err)
+    //     }
+    // });
+    // res.json(feedbackData);
 })
 
 // // edit
 router.put('/api/edit/:id',(req, res)=>{
-     let id = req.params.id;
-     let fdbk = req.body.feedback;
-
-    feedbackData[id].feedback = fdbk;
-    //ジェイソンファイルに書き出す   fs.writeFile(file, data[,options encoding 'utf8'], callback)
-    fs.writeFile('data/json/feedback.json', JSON.stringify(feedbackData),'utf8',err=>{
-        if(err){
-            console.error(err);
-        }
-    });
-
-    res.json(feedbackData);
+    let paramId = parseInt(req.params.id);
+    let fdbk = req.body.feedback;
+// way 2
+    db.feedbacks.update(
+        {feedback: fdbk}
+        ,{where:{id: {[Sequelize.Op.eq]: paramId}}
+    })
+    .then(results => {
+        // console.log(data.get({plain: true}))
+        db.feedbacks.findAll({
+            attributes:['id','name','feedback','feeling.icon']
+            ,order: [['id', 'DESC']]
+            ,include: [{
+                model:db.feelings,
+                required:true
+                }]
+        })
+        .then(results => {
+                res.json(results)
+        });
+    })
+    .catch(error => {
+        console.error(`Error Message: ${error}`)
+    })
+    // feedbackData[id].feedback = fdbk;
+    // //ジェイソンファイルに書き出す   fs.writeFile(file, data[,options encoding 'utf8'], callback)
+    // fs.writeFile('data/json/feedback.json', JSON.stringify(feedbackData),'utf8',err=>{
+    //     if(err){
+    //         console.error(err);
+    //     }
+    // });
+    // res.json(feedbackData);
 })
 
 module.exports = router;
