@@ -1,5 +1,6 @@
 lecture/
-knowledge/
 .DS_Store
-assignment/0_node/
-assignment/1_express/
+assignment/0_node/node_modules
+assignment/1_express/clashRoyale
+assignment/1_express/firstExpressApp/node_modules
+
