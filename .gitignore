@@ -1,9 +1,4 @@
-lecture/
-knowledge/
-.DS_Store
-assignment/0_node/
-assignment/1_express/
-assignment/2_ejs/clashRoyale/public/imgs/
-assignment/2_ejs/clashRoyale/node_modules/
-assignment/2_ejs/clashRoyale/data/
+public/imgs/
+node_modules/
+data/
 
