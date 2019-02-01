@@ -1,5 +1,5 @@
 $(function(){
-// Make connection
+// Make connection to chat function
   const socket = io.connect("http://localhost:3500");
 
   $('#chatButton').on('click', event =>{
@@ -52,7 +52,7 @@ $(function(){
 
 // listening on other people's typing
   socket.on('typing', data=>{
-    $("#typing").html('<p><em>'+data+'is typing a message...</em></p>');
+    $("#typing").html('<p><em>'+data+' is typing a message...</em></p>');
   });
 
 });

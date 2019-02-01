@@ -3,7 +3,8 @@ const app = express();
 // const dataFile = require('./data/json/clashRoyaleData.json');
 const socket = require('socket.io');
 const db = require('./models/')
-
+const session = require('express-session')
+// const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const http = require('http').Server(app);
 const server = app.listen(3500, function(){
     console.log('Listening on port 3500.')

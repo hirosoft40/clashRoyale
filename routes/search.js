@@ -6,9 +6,6 @@ const Sequelize = require('sequelize');
 router.get('/search',(req, res)=>{
     let searchID = req.query.search
 
-    //error handling
-    // if (parseInt(searchID)) res.send('URL Error: Please type in Card Name that you want to search.'); 
-
     db.cards.findAll({
         include: [
         {model:db.types,required:true}

@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
-// const feedbackData = require('../data/json/feedback.json')
 const bodyParser = require('body-parser');
 const db = require('../models/');
 const Sequelize = require('sequelize');
@@ -23,8 +22,6 @@ router.get('/api',(req, res)=>{
     });
 });
 
-
-// router.use(bodyParser.json()); // telling system that I want to use json.
 
 // if false: telling system to use a simple algorithm for shallow parsing
 // if true: complex algorightm for parsing that can deal with nested objects
@@ -53,22 +50,6 @@ router.post('/api',(req, res)=>{
     })
 });
 
-    // データを変数に追加
-    // feedbackData.unshift(req.body);
-    // console.log("(1) Without JSON.stringfy", feedbackData) // ==> SHOW DATA
-    // console.log("(2) JSON STRINGFY", JSON.stringify(feedbackData)) ==> everthing is ""
-    // console.log("(3) bodyparseer JSON",bodyParser.json(feedbackData)) ==> function Simply telling body parser to use json
-
-    //ジェイソンファイルに書き出す   fs.writeFile(file, data[,options encoding 'utf8'], callback)
-    // fs.writeFile('data/json/feedback.json', JSON.stringify(feedbackData),'utf8',err=>{
-    //     if(err){
-    //         console.error(err);
-    //     }
-    // });
-    //     // 新しいジェイソんファイルを書き出す
-    // res.json(feedbackData)
-
-
 
 // delete route
 router.delete('/api/delete/:id',(req, res)=>{
@@ -93,15 +74,10 @@ router.delete('/api/delete/:id',(req, res)=>{
     .catch(error => {
         console.error(`Error Message: ${error}`)
     })
-    // fs.writeFile('data/json/feedback.json',JSON.stringify(feedbackData),err=>{
-    //     if(err){
-    //         console.error(err)
-    //     }
-    // });
-    // res.json(feedbackData);
+
 })
 
-// // edit
+// // edit route
 router.put('/api/edit/:id',(req, res)=>{
     let paramId = parseInt(req.params.id);
     let fdbk = req.body.feedback;
@@ -111,7 +87,6 @@ router.put('/api/edit/:id',(req, res)=>{
         ,{where:{id: {[Sequelize.Op.eq]: paramId}}
     })
     .then(results => {
-        // console.log(data.get({plain: true}))
         db.feedbacks.findAll({
             attributes:['id','name','feedback','feeling.icon']
             ,order: [['id', 'DESC']]
@@ -127,14 +102,6 @@ router.put('/api/edit/:id',(req, res)=>{
     .catch(error => {
         console.error(`Error Message: ${error}`)
     })
-    // feedbackData[id].feedback = fdbk;
-    // //ジェイソンファイルに書き出す   fs.writeFile(file, data[,options encoding 'utf8'], callback)
-    // fs.writeFile('data/json/feedback.json', JSON.stringify(feedbackData),'utf8',err=>{
-    //     if(err){
-    //         console.error(err);
-    //     }
-    // });
-    // res.json(feedbackData);
 })
 
 module.exports = router;
