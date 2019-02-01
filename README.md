@@ -80,7 +80,7 @@ This method is easier when creating tables and columns based on models. Define m
 </code>
 
 
-<li>JOIN</li>
-Specify in ininclude
+<li>Join</li>
+<p>Specify in ininclude. If you want to inner join, specify "required:true". It will be left outer join without it.</p>
 
-<img src='screenshots/sequelize.png'>
+<p><img src='screenshots/sequelize.png'></p>
