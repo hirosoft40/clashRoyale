@@ -54,50 +54,33 @@ For the querying part, I found it was much easier to write SQL first to get clea
 ## My Note on Sequelize
  <ol>
 <li>sequelize init</li>
-this will create following folders 
- |- conig
-      |- config.json // set up database information /sql light, postgres, mySQL
-|- models       
-|- migrations
+<p>this will create following folders </p>
+<p>|- conig</p>
+<p>     |- config.json // set up database information /sql light, postgres, mySQL</p>
+<p>|- models</p>
+<p>|- migrations</p>
+
+<li>Run bash files(if any)</li>
+<img src='screenshots/bash.png'>
+
 
 <li>create models</li>
-This is database model and needs to be completed before set up database. 
-// this part should define columns besides foreign keys
-<code>
-const arenas = sequelize.define('arenas', {
-    name: DataTypes.STRING,
-    arenaName: DataTypes.STRING
-  }, {});
-// This area should define foreign keys
-    arenas.associate = function(models) {
-    // associations can be defined here
-    arenas.hasMany(models.cards,{
-      onDelete:'CASCADE',
-      foreignKey:'arena_id'
-    });
-  };
-</code>
+<p>This is database model and needs to be completed before set up database. </p>
+<p>This part should define columns besides foreign keys. If you are using migration files, which will be easier when deploying, do not forget to define foreign key columns in migration files. If you are using .sync, then just defining relations in model files are suffice.</p>
+<img src='screenshots/modelcard.png'>
+<p> </p>
+<img src='screenshots/modelarena.png'>
 
 <li>sync / db:migrate</li>
 There are 2 ways to create database
+<p>[1] .sync
+This method is easier when creating tables and columns based on models. Define models and sync it in js file. If you set {force:true}, this will overwrite tables if exists. Therefore it would be safer to set {force:false}.</p>
+<code>
+<p>// db.sequelize.sync({force:true}).then();</p>
+</code>
 
-// crate tables force:true will overwrite tables if exists
-// db.sequelize.sync({force:true}).then(()=>{
-//     app.listen(3500)
-// })
 
 <li>JOIN</li>
-Specify ininclude
-<code>
-include: [
-        {model:db.types,required:true}
-        , { model:db.rarities,requiredx:true}
-        , { model:db.arenas,required:true}
-        , { model:db.elixircosts, required:true
-        }]
-,where: {
-        name: {[Sequelize.Op.iLike]: `%${searchID}%`}
-        }
-</code>
+Specify in ininclude
 
 <img src='screenshots/sequelize.png'>
