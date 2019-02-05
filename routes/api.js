@@ -29,8 +29,9 @@ router.use(bodyParser.urlencoded({extended:false}));
 
 router.post('/api',(req, res)=>{
     let icon = !(req.body.icon) ? null : parseInt(req.body.icon);
+    const {name, feedback} = req.body;
 
-    db.feedbacks.create({name:req.body.name, feedback:req.body.feedback, icon_id:icon})
+    db.feedbacks.create({name, feedback, icon_id:icon})
     .then(results => {
         // console.log(data.get({plain: true}))
         db.feedbacks.findAll({

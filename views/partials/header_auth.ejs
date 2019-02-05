@@ -66,13 +66,16 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Sign In <i class="fas fa-sign-in-alt"></i> </a>
-                    <div class="dropdown hide">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user mr-2"></i>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/profile">Edit Profile</a>
-                        <a class="dropdown-item" href="/logout">Logout</a>
+                    <div class='afterauth'>
+                        <a class="nav-link" href="/chat"> <i class="fas fa-sign-in-alt"></i> </a>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/profile">Edit Profile</a>
+                            <a class="dropdown-item" href="/logout">Logout</a>
+                            </div>
                         </div>
                     </div>
                 </li>

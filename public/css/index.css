@@ -11,6 +11,7 @@
 .cards {
     background-image: url('/imgs/bg_imgs/bg_blue.png');
 }
+
 .types {
     background-image: url('/imgs/bg_imgs/bg_blue.png');
 }
@@ -299,3 +300,4 @@ input[type=radio] + i:hover {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
+

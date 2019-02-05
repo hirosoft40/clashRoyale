@@ -13,6 +13,7 @@
     "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
     "connect-pg-simple": "^5.0.0",
+    "connect-session-sequelize": "^6.0.0",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
