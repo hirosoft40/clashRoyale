@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport');
 // const cookieParser = require('cookie-parser');
 const session = require('express-session');
-// const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 // login get

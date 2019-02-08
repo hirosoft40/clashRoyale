@@ -1,16 +1,18 @@
 const express = require('express');
 const app = express();
 // const dataFile = require('./data/json/clashRoyaleData.json');
-const socket = require('socket.io');
+// const socket = require('socket.io');
 const db = require('./models/')
 const flash = require('connect-flash');
 const session = require('express-session')
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // ==== Server set up 
 const http = require('http').Server(app);
+const io  = require('socket.io')(http);
 
 // Passport config
 require('./config/passport')(passport);
@@ -23,16 +25,20 @@ app.set('views', 'views');
 app.use(express.static('public'));
 
 // === bodyparser
-app.use(cookieParser());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
+app.use(cookieParser());
+
+var myStore = new SequelizeStore({db:db.sequelize});
 
 // Express session
 app.use(session({
     secret: 'secret login',
+    store: myStore,
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    proxy:true
 }))
 
 // passport initialization
@@ -73,14 +79,13 @@ app.use('/auth',require('./routes/auth'));
 
 
 //server
-const PORT = process.env.PORT || 3500;
-const server = app.listen(PORT, function(){
-    console.log(`Server started on port ${PORT}.`)
-})
-app.set('port', process.env.PORT || 3500);
+// const PORT = process.env.PORT || 3500;
+// const server = app.listen(PORT, function(){
+//     console.log(`Server started on port ${PORT}.`)
+// })
+// app.set('port', process.env.PORT || 3500);
 
 
-const io  = socket(server);
 // io.attach(server);
 io.on('connection', function(socket) {
     console.log('made socket connetcion', socket.id)
@@ -94,5 +99,9 @@ io.on('connection', function(socket) {
     socket.on('typing', data => {
         socket.broadcast.emit('typing', data)
     })
+});
 
+
+http.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
