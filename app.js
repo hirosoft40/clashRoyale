@@ -41,6 +41,8 @@ app.use(session({
     proxy:true
 }))
 
+myStore.sync();
+
 // passport initialization
 app.use(passport.initialize());
 app.use(passport.session());
@@ -104,9 +106,7 @@ io.on('connection', function(socket) {
     })
 });
 
-db.sequelize.sync().then(function() {
-    http.listen(process.env.PORT || 3000, function(){
-        console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-    });
-  });
 
+http.listen(process.env.PORT || 3500, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
