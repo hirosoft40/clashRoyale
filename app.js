@@ -44,47 +44,47 @@ app.use(session({
 
 
 
-db.sequelize.sync();
+// db.sequelize.sync();
 
 // ===== INSERT DATA
-db.types.bulkCreate([{name:'Troops'},{name:'Buildings'},{name:'Spells'}]);
-db.rarities.bulkCreate([{name:'Common'},{name:'Rare'},{name:'Epic'},{name:'Legendary'}])
-db.arenas.bulkCreate([
-    {name:'Training Camp', arenaName:'Training Camp'}
-    ,{name:'Arena 1', arenaName:'Goblin Stadium'}
-    ,{name:'Arena 2', arenaName:'Bone Pit'}
-    ,{name:'Arena 3', arenaName:'Barbarian Bowl'}
-    ,{name:'Arena 4', arenaName:"P.E.K.K.A.'s Playhouse Cards"}
-    ,{name:'Arena 5', arenaName:'Spell Valley Cards'}
-    ,{name:'Arena 6', arenaName:"Builder's Workshop"}
-    ,{name:'Arena 7', arenaName:'Royal Arena'}
-    ,{name:'Arena 8', arenaName:'Frozen Peak'}
-    ,{name:'Arena 9', arenaName:'Jungle Arena'}
-    ,{name:'Arena 10',arenaName:'Hog Mountain'}
-    ,{name:'Arena 11',arenaName:'Electro Valley'}
-])
+// db.types.bulkCreate([{name:'Troops'},{name:'Buildings'},{name:'Spells'}]);
+// db.rarities.bulkCreate([{name:'Common'},{name:'Rare'},{name:'Epic'},{name:'Legendary'}])
+// db.arenas.bulkCreate([
+//     {name:'Training Camp', arenaName:'Training Camp'}
+//     ,{name:'Arena 1', arenaName:'Goblin Stadium'}
+//     ,{name:'Arena 2', arenaName:'Bone Pit'}
+//     ,{name:'Arena 3', arenaName:'Barbarian Bowl'}
+//     ,{name:'Arena 4', arenaName:"P.E.K.K.A.'s Playhouse Cards"}
+//     ,{name:'Arena 5', arenaName:'Spell Valley Cards'}
+//     ,{name:'Arena 6', arenaName:"Builder's Workshop"}
+//     ,{name:'Arena 7', arenaName:'Royal Arena'}
+//     ,{name:'Arena 8', arenaName:'Frozen Peak'}
+//     ,{name:'Arena 9', arenaName:'Jungle Arena'}
+//     ,{name:'Arena 10',arenaName:'Hog Mountain'}
+//     ,{name:'Arena 11',arenaName:'Electro Valley'}
+// ])
 
 
-db.elixircosts.bulkCreate([
-    {name:'Elixir Cost 1'}
-    ,{name:'Elixir Cost 2'}
-    ,{name:'Elixir Cost 3'}
-    ,{name:'Elixir Cost 4'}
-    ,{name:'Elixir Cost 5'}
-    ,{name:'Elixir Cost 6'}
-    ,{name:'Elixir Cost 7'}
-    ,{name:'Elixir Cost 8'}
-    ,{name:'Elixir Cost 9'}
-    ]);
+// db.elixircosts.bulkCreate([
+//     {name:'Elixir Cost 1'}
+//     ,{name:'Elixir Cost 2'}
+//     ,{name:'Elixir Cost 3'}
+//     ,{name:'Elixir Cost 4'}
+//     ,{name:'Elixir Cost 5'}
+//     ,{name:'Elixir Cost 6'}
+//     ,{name:'Elixir Cost 7'}
+//     ,{name:'Elixir Cost 8'}
+//     ,{name:'Elixir Cost 9'}
+//     ]);
 
- db.feelings.bulkCreate([
-    {name:'smile', icon:'fa-grin-stars'}
-    ,{name:'laugh', icon:'fa-laugh'}
-    ,{name:'surprise', icon:'fa-surprise'}
-    ,{name:'sad', icon:'fa-sad-tear'}
-    ,{name:'tired', icon:'fa-tired'}
-    ,{name:'angry', icon:'fa-angry'}
-])
+//  db.feelings.bulkCreate([
+//     {name:'smile', icon:'fa-grin-stars'}
+//     ,{name:'laugh', icon:'fa-laugh'}
+//     ,{name:'surprise', icon:'fa-surprise'}
+//     ,{name:'sad', icon:'fa-sad-tear'}
+//     ,{name:'tired', icon:'fa-tired'}
+//     ,{name:'angry', icon:'fa-angry'}
+// ])
 
  db.cards.bulkCreate([
     {name:'Barbarian Hut',type_id:2,elixir_id:7,rarity_id:2,arena_id:4,summary:"The Barbarian Hut card is unlocked from the Barbarian Bowl (Arena 3). It is a high-hitpoint building that spawns a pair of Barbarians with moderate hitpoints and damage every 14 seconds. A Barbarian Hut card costs 7 Elixir to deploy.",img_url:'BarbarianHutCard.png'}

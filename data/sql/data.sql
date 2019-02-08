@@ -27,26 +27,26 @@
 -- ,(DEFAULT, 'Buildings', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
 -- ,(DEFAULT, 'Spells', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
--- -- -- INSERT INTO rarities VALUES
--- -- -- (DEFAULT,'Common',now(), now())
--- -- -- ,(DEFAULT,'Rare',now(), now())
--- -- -- ,(DEFAULT,'Epic',now(), now())
--- -- -- ,(DEFAULT,'Legendary',now(), now());
+-- INSERT INTO rarities VALUES
+-- (DEFAULT,'Common',now(), now())
+-- ,(DEFAULT,'Rare',now(), now())
+-- ,(DEFAULT,'Epic',now(), now())
+-- ,(DEFAULT,'Legendary',now(), now());
 
--- -- -- INSERT INTO arenas VALUES
--- -- -- (DEFAULT,'Training Camp','Training Camp',now(), now())
--- -- -- , (DEFAULT,'Arena 1','Goblin Stadium',now(), now())
--- -- -- , (DEFAULT,'Arena 2','Bone Pit',now(), now())
--- -- -- , (DEFAULT,'Arena 3','Barbarian Bowl',now(), now())
--- -- -- , (DEFAULT,'Arena 4','P.E.K.K.A.''s Playhouse Cards',now(), now())
--- -- -- , (DEFAULT,'Arena 5','Spell Valley Cards',now(), now())
--- -- -- , (DEFAULT,'Arena 6','Builder''s Workshop',now(), now())
--- -- -- , (DEFAULT,'Arena 7','Royal Arena',now(), now())
--- -- -- , (DEFAULT,'Arena 8','Frozen Peak',now(), now())
--- -- -- , (DEFAULT,'Arena 9','Jungle Arena',now(), now())
--- -- -- , (DEFAULT,'Arena 10','Hog Mountain',now(), now())
--- -- -- , (DEFAULT,'Arena 11','Electro Valley',now(), now())
--- -- -- ;
+-- INSERT INTO arenas VALUES
+-- (DEFAULT,'Training Camp','Training Camp',now(), now())
+-- , (DEFAULT,'Arena 1','Goblin Stadium',now(), now())
+-- , (DEFAULT,'Arena 2','Bone Pit',now(), now())
+-- , (DEFAULT,'Arena 3','Barbarian Bowl',now(), now())
+-- , (DEFAULT,'Arena 4','P.E.K.K.A.''s Playhouse Cards',now(), now())
+-- , (DEFAULT,'Arena 5','Spell Valley Cards',now(), now())
+-- , (DEFAULT,'Arena 6','Builder''s Workshop',now(), now())
+-- , (DEFAULT,'Arena 7','Royal Arena',now(), now())
+-- , (DEFAULT,'Arena 8','Frozen Peak',now(), now())
+-- , (DEFAULT,'Arena 9','Jungle Arena',now(), now())
+-- , (DEFAULT,'Arena 10','Hog Mountain',now(), now())
+-- , (DEFAULT,'Arena 11','Electro Valley',now(), now())
+-- ;
 
 -- -- INSERT INTO cards VALUES
 -- -- (DEFAULT, 'Barbarian Hut',2,7,2,4,'The Barbarian Hut card is unlocked from the Barbarian Bowl (Arena 3). It is a high-hitpoint building that spawns a pair of Barbarians with moderate hitpoints and damage every 14 seconds. A Barbarian Hut card costs 7 Elixir to deploy.','BarbarianHutCard.png',now(),now())
