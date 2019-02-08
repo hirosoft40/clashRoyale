@@ -11,17 +11,17 @@
 	padding:0;
 }
 .login {
-    /* background-image: url('/imgs/bg_imgs/bg_brightBlue.jpg'); */
-    background: #4286f4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #f64f59,#c471ed, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #f64f59,#c471ed, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.message {
     background-image: url('/imgs/bg_imgs/bg_darkBlue.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 10% 50%;
+}
+.message {
+    /* background-image: url('/imgs/bg_imgs/bg_brightBlue.jpg'); */
+    background: #4286f4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f64f59,#c471ed, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f64f59,#c471ed, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .msg{
 	width:50%;

@@ -1,8 +1,9 @@
 <header>
     <nav class="navbar navbar-expand-lg py-0 fixed-top">
         <a class="navbar-brand" href="/"><img src='/imgs/bg_imgs/logo.png' width='120px' ;></a>
-        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -13,34 +14,35 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/cards" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="/cards" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Cards
                     </a>
                     <ul class="dropdown-menu multi-level" role='menu' aria-labelledby="navbarDropdown">
                         <li class="dropdown-submenu">
                             <a class="dropdown-item" href="/types">Types</a>
                             <ul class="dropdown-menu">
-                            <%uniqueType.forEach(item=>{%>
-                            <li><a class="dropdown-item" href="/types/<%=item%>">
-                                <%=item%></a></li>
-                            <%});%>
+                                <%uniqueType.forEach(item=>{%>
+                                <li><a class="dropdown-item" href="/types/<%=item%>">
+                                        <%=item%></a></li>
+                                <%});%>
                             </ul>
                         </li>
                         <li class="dropdown-submenu">
                             <a class="dropdown-item" href="/rarity/">Rarity</a>
                             <ul class="dropdown-menu">
-                            <%uniqueRarity.forEach(item=>{%>
-                            <li><a class="dropdown-item" href="/rarity/<%=item%>">
-                                <%=item%></a></li>
-                            <%});%>
+                                <%uniqueRarity.forEach(item=>{%>
+                                <li><a class="dropdown-item" href="/rarity/<%=item%>">
+                                        <%=item%></a></li>
+                                <%});%>
                             </ul>
                         </li>
                         <li class="dropdown-submenu">
                             <a class="dropdown-item" href="/arenas/">Arena</a>
                             <ul class="dropdown-menu">
-                            <%uniqueArena.forEach(item=>{%>
-                            <li><a class="dropdown-item" href="/arenas/<%=item.split(' ').join('')%>"><%=item%></a></li>
+                                <%uniqueArena.forEach(item=>{%>
+                                <li><a class="dropdown-item" href="/arenas/<%=item.split(' ').join('')%>"><%=item%></a>
+                                </li>
                                 <%});%>
                             </ul>
                         </li>
@@ -60,22 +62,28 @@
             <ul class="navbar-nav ml-md-auto">
                 <li class="nav-item">
                     <form class="form-inline my-2 my-lg-0" action="/search" method="get">
-                        <input class="form-control mr-sm-2" type="search" id ='inputSearch' placeholder="Search Cards" name='search' aria-label="Search">
-                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id='btnSearch'>Search</button>
+                        <input class="form-control mr-sm-2" type="search" id='inputSearch' placeholder="Search Cards"
+                            name='search' aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"
+                            id='btnSearch'>Search</button>
                     </form>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="/login">Sign In <i class="fas fa-sign-in-alt"></i> </a>
-                    <div class="dropdown hide">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user mr-2"></i>
+                <li class="nav-item">
+                    <% if(loginname != '') { %>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user mr-2"></i><%= loginname %>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/profile">Edit Profile</a>
-                        <a class="dropdown-item" href="/logout">Logout</a>
+                            <!-- <a class="dropdown-item" href="/auth/register">Edit Profile</a> -->
+                            <a class="dropdown-item" href="/auth/logout">Logout</a>
                         </div>
                     </div>
-                </li> -->
+                    <% } else { %>
+                    <a class="nav-link" href="/auth/login">Log In <i class="fas fa-sign-in-alt"></i> </a>
+                <% } %>
+                </li>
             </ul>
         </div>
     </nav>

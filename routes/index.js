@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const {ensureAuth} = require('../config/auth');
 
 // index 
 router.get('/',(req, res)=>{
@@ -19,12 +20,14 @@ router.get('/feedback',(req, res)=>{
 });
 
 // chat
-router.get('/chat',(req, res)=>{
+router.get('/chat',ensureAuth,(req, res)=>{
     res.render('chat',{
+        username: req.user["username"],
         pageID:'chat',
         bodyClass:'chat'
     });
 });
+
 
 module.exports = router;
 

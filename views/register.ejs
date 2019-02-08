@@ -1,0 +1,105 @@
+<!-- <% include partials/head.ejs %> -->
+<link rel='stylesheet' href='/css/profile.css'>
+</head>
+
+<body class='newProfile'>
+    <% include partials/header.ejs %>
+    <section class="main">
+        <div class='container'>
+            <div class="row d-flex justify-content-center">
+                <h1 class='my-2 text-center'> NEW PROFILE <i class="fas fa-user-plus"></i></h1>
+            </div>
+            <% include partials/message %>
+            <!-- < class="form"> -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-md-5">
+                    <form action='/auth/register' method='POST' onsubmit="return checkForm(this);">
+                        <div class="form-group">
+                            <label for="username">
+                                <h5>Username<small>*</small></h5>
+                            </label>
+                            <input title="Enter username" type="text" class="form-control" name="username"
+                                placeholder="username" required>
+                        </div>
+                        <div class="form-group my-1">
+                            <label for="email">
+                                <h5>Email<small>*</small></h5>
+                            </label>
+                            <input id='email' type="email" class="form-control" name="email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="you@email.com" required>
+                        </div>
+                        <div class="form-group my-1">
+                            <label for="password">
+                                <h5>Password<small>*</small></h5>
+                                <p class='pnote'>At least 6 characters, including UPPER/lowercase and
+                                    numbers</p>
+                            </label>
+                            <input id='password1' type="password" class="form-control" name="password"
+                                placeholder="password"
+                                title="Password must contain at least 6 characters, including UPPER/lowercase and numbers"
+                                required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : '');
+                        if(this.checkValidity()) form.password2.pattern = RegExp.escape(this.value);">
+                        </div>
+                        <div class="form-group my-1">
+                            <label for="password2">
+                                <h5>Confirm Password<small>*</small></h5>
+                                <p class='pnote'>Same password as above</p>
+                            </label>
+                            <input id='password2' type="password" class="form-control"
+                                title="Please enter the same password" name="password2" placeholder="confirm password"
+                                required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                                onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : '');">
+                        </div>
+                        <div class="form-group my-4 text-center">
+                            <button class="btn save btn-primary" type='submit' id="newProfile"><i
+                                    class="fas fa-check"></i>
+                                Register
+                            </button>
+                            <p class="lead mt-4">Have An Account? <a href="/auth/login">Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <% include partials/footer.ejs %>
+    <!--/CONTAINER END -->
+    <script>
+        if (!RegExp.escape) {
+            RegExp.escape = function (s) {
+                return String(s).replace(/[\\^$*+?.()|[\]{}]/g, '\\$&');
+            };
+        }
+
+        function checkPassword(str) {
+            var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+            return re.test(str);
+        }
+
+        function checkForm(form) {
+            if (form.username.value == "") {
+                alert("Error: Username cannot be blank!");
+                form.username.focus();
+                return false;
+            }
+            re = /^\w+$/;
+            if (!re.test(form.username.value)) {
+                alert("Error: Username must contain only letters, numbers and underscores!");
+                form.username.focus();
+                return false;
+            }
+            if (form.password.value != "" && form.password.value == form.password2.value) {
+                if (!checkPassword(form.password.value)) {
+                    alert("The password you have entered is not valid!");
+                    form.password.focus();
+                    return false;
+                }
+            } else {
+                alert("Error: Please check that you've entered and confirmed your password!");
+                form.password.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <% include partials/footer2.ejs %>

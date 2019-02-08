@@ -8,10 +8,11 @@
             <div class="row mt-1 mt-md-3 d-flex justify-content-around">
 
                 <div class="col-12 col-md-7 col-lg-7">
-                    <h2 class='chatTitle'>Chat with your friends</h2>
+                        <h2 class='chatTitle'>Welcome <%=username%></h2>
+                        <h2 class='chatTitle'>Chat with your friends</h2>
 
                     <div class='chat'>
-                        <input type="text" id='chatName' name='chatName' class='form-control' aria-describedby="chatName" placeholder="Handle name">
+                        <input type="text" id='chatName' name='chatName' class='form-control' aria-describedby="chatName" value='<%= username%>' placeholder="Handle name" readonly>
                         <div class='d-flex justify-content-center'>
                         <input type="text" id='chatMessage' name='chatMessage'  class='form-control' aria-describedby="chatMessage"
                             placeholder="Type in Message and hit enter">
@@ -26,3 +27,5 @@
             </div>
 
             <% include partials/footer.ejs %>
+            <script src ='/js/chat.js'></script>    
+            <% include partials/footer2.ejs %>
