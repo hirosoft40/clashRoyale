@@ -58,7 +58,9 @@ app.use((req,res,next)=>{
     res.locals.error = req.flash('error');
     if(req.user){
         res.locals.loginname = req.user["username"];
-        console.log(res.locals.loginname)
+        console.log('My name is', res.locals.loginname)
+        } else{
+        res.locals.loginname = "";
         }
     next();
 })
