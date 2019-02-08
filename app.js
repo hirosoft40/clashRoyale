@@ -41,8 +41,8 @@ app.use(session({
     proxy:true
 }))
 
-myStore.sync();
-db.sequelize.sync();
+// myStore.sync();
+// db.sequelize.sync();
 
 // passport initialization
 app.use(passport.initialize());
