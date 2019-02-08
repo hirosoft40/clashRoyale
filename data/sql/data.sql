@@ -1,15 +1,15 @@
-SELECT 
-    c.name, t.name as type, 
-    r.name as rarity, 
-    a.name as arena, 
-    e.name as elixir, 
-    summary, 
-    img_url 
-FROM cards c
-JOIN types t ON t.id = c.type_id 
-JOIN elixircosts e ON e.id = c.elixir_id
-JOIN arenas a ON a.id = c.arena_id 
-JOIN rarity r ON r.id = c.rarity_id;
+-- SELECT 
+--     c.name, t.name as type, 
+--     r.name as rarity, 
+--     a.name as arena, 
+--     e.name as elixir, 
+--     summary, 
+--     img_url 
+-- FROM cards c
+-- JOIN types t ON t.id = c.type_id 
+-- JOIN elixircosts e ON e.id = c.elixir_id
+-- JOIN arenas a ON a.id = c.arena_id 
+-- JOIN rarity r ON r.id = c.rarity_id;
 
 -- SELECT c.name, t.name as type, 
 -- r.name as rarity,
