@@ -69,20 +69,7 @@
                     </form>
                 </li>
                 <li class="nav-item">
-                    <% if(loginname != '') { %>
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user mr-2"></i><%= loginname %>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <!-- <a class="dropdown-item" href="/auth/register">Edit Profile</a> -->
-                            <a class="dropdown-item" href="/auth/logout">Logout</a>
-                        </div>
-                    </div>
-                    <% } else { %>
-                    <a class="nav-link" href="/auth/login">Log In <i class="fas fa-sign-in-alt"></i> </a>
-                <% } %>
+
                 </li>
             </ul>
         </div>
