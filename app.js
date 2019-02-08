@@ -42,6 +42,7 @@ app.use(session({
 }))
 
 myStore.sync();
+db.sequelize.sync();
 
 // passport initialization
 app.use(passport.initialize());
