@@ -51,10 +51,5 @@ db.Sequelize = Sequelize;
   // so if you already have your server listening for requests, maybe delete that code. I think, IDK i just copied this
   // off of documentation
   // db.  is assuming you already set sequelize on db
-  // db.sequelize.sync().then(function() {
-  //   http.createServer(app).listen(app.get('port'), function(){
-  //     console.log('Express server listening on port ' + app.get('port'));
-  //   });
-  // });
-
+  
 module.exports = db;

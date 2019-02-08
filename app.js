@@ -61,6 +61,7 @@ app.use((req,res,next)=>{
         console.log('My name is', res.locals.loginname)
         } else{
         res.locals.loginname = "";
+
         }
     next();
 })
@@ -103,7 +104,9 @@ io.on('connection', function(socket) {
     })
 });
 
+db.sequelize.sync().then(function() {
+    http.listen(process.env.PORT || 3000, function(){
+        console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+    });
+  });
 
-http.listen(process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
