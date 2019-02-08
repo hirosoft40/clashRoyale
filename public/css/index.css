@@ -1,0 +1,303 @@
+@import url(https://fonts.googleapis.com/css?family=Changa:700|Denk+One|Lato|Palanquin:700|Roboto|Ubuntu+Mono:700|Viga);
+
+/* background images */
+.index{
+    background-image: url('/imgs/bg_imgs/bg_index_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh; 
+}
+.cards {
+    background-image: url('/imgs/bg_imgs/bg_blue.png');
+}
+
+.types {
+    background-image: url('/imgs/bg_imgs/bg_blue.png');
+}
+.rarity {
+    background-image: url('/imgs/bg_imgs/bg_red.png');
+}
+.arena {
+    background-image: url('/imgs/bg_imgs/bg_green.png');
+}
+.error {
+    background-image: url('/imgs/bg_imgs/bg_darkBlue.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+.feedback{
+    height:auto;
+    background-image: url('/imgs/bg_imgs/bg_field.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.blackLayover{
+    min-height:100vh;
+    background-color: rgba(0, 0, 0,.4);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* feedback page */
+.chat{
+    height:auto;
+    background-image: url('/imgs/bg_imgs/bg_loud.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
+/* index page */
+.mainTitle{
+    margin:0;
+    text-align: center;
+    font-size:2.7rem;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.card{
+    border-radius: 0.75rem;
+    max-width:100%;
+}
+.card-title > a{
+    color:rgb(63, 63, 63);
+}
+.carousel-item{
+    padding:0;
+}
+.iframe{
+    max-width: 100%;
+}
+.carousel-control-prev, .carousel-control-next, .carousel-control-prev-icon, .carousel-control-next-icon{
+    color: #007bff;
+    margin-top:50px;
+    max-height: 150px;
+}
+.indexRight{
+    margin:0;
+    padding:0;
+    background-color: #fff;
+    z-index: 5;
+    color:rgb(63, 63, 63);
+}
+.indexText{
+    font-family: 'Lato', sans-serif;
+    font-size:18px;
+    color:rgb(63, 63, 63);
+}
+.links i{
+    color:rgb(63, 63, 63);
+    font-size: 40px;
+}
+/* cards related page */
+.text{
+    font-family: 'Lato', sans-serif;
+    color:#fff
+}
+.text a{
+    color:#fff;
+}
+h3 a{
+    color:#fff;
+    font-size:30px;
+}
+a:hover{
+    color:red;
+}
+
+/* feedback page */
+/* submit button */
+.btn-primary{ 
+    letter-spacing: 0.1rem;
+    width:150px;
+    margin: auto auto;
+    padding:10px;
+}
+/* feedback forms */
+.form-group{
+    margin-bottom: 20px;
+    padding:10px;
+}
+.feedbackTitle{
+    text-align:center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+label{
+    letter-spacing:0.1rem;
+    text-transform: uppercase;
+}
+/* display feedbacks */
+#apiStart{
+    overflow: auto;
+    display:block;
+}
+.divFeedback{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: .75rem;
+    border:10px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 2px 10px rgba(255, 255, 255,0.16), 0 3px 6px rgba(255, 255, 255,0.1);
+    font-size:14px;
+    /* overflow: visible;
+    display:block;
+    height:auto; */
+    padding:10px;
+    margin:10px auto;
+    font-family: 'Lato', sans-serif;
+    color:rgb(63, 63, 63);
+}
+.divFeedback > p{
+    margin:0;
+    font-weight:bold;
+}
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+/* comment edit */
+.editingName, .editingFeedback{
+    max-width:300px;
+    background-color: #fff;
+    border-radius:.3rem;
+    padding:5px;
+    font-size:14px;
+    outline:none;
+    overflow: auto;
+    }
+.editingFeedback{
+    display: block;
+    width:600px;
+    height:30px;
+}
+/* CHECKED STYLES */
+input[type=radio]:checked + i {
+    color:#007bff;    
+    background-color: transparent;
+  }
+input[type=radio] + i:hover {
+    color:#007bff;    
+    background-color: transparent;
+  }
+
+  input[type=radio]+i { 
+    cursor: pointer;
+    font-size:2.4rem;
+    margin-left:0;
+  }
+.emojiClicked{
+    color:#007bff;    
+    background-color: transparent;
+}
+.radioButtons{
+    margin:0;
+    padding:0;
+    width:100%
+}
+
+.delete:hover{
+    color:rgb(190, 0, 0) !important;
+}
+.edit:hover{
+    color:rgb(190, 0, 0) !important;
+}
+/* chat */
+/* .chat{
+    border-radius: 0.75rem;
+    border:2px solid #012449;
+} */
+.output{
+    min-height: 60vh;
+}
+#chatName, #chatMessage{
+    border-radius: 0.75rem !important;
+    outline:none!important;
+    border:none;
+    height:50px;
+    margin:5px;
+    border-bottom: 2px solid transparent;
+}
+#chatName:focus, #chatMessage:focus, #chatButton:focus{
+    box-shadow: none;
+}
+
+#chatButton{
+    border-radius: 0.75rem !important;
+    letter-spacing: 0.1rem;
+    width:20%;
+    margin:5px 0;
+    /* background-color:#007bff;   */
+    background-color: goldenrod;
+    border-bottom: 2px solid transparent;
+    /* color:#012449; */
+    color:rgb(63, 63, 63);
+}
+#chatBoard{
+    border-radius: 0.75rem !important;
+    color:rgb(63, 63, 63);
+    padding:10px;
+    background-color: transparent;
+    font-size:16px;
+    font-family: 'Lato', sans-serif;
+}
+#chatBoard strong{
+    /* color:#007bff; */
+    margin-right:4px;
+}
+.msg{
+    overflow-wrap:break-word;
+    max-width: 80%;
+    font-weight: none;
+}
+.myChat{
+    color:#222222;
+    background-color: #f0ba26;
+    max-width:80%;
+    border-radius: 0.5rem;
+    margin:2px;
+    padding:5px;
+    padding-left:5px;
+}
+.chatWindow{
+    /* background-color: rgb(235, 235, 235); */
+    background-color: #fff;
+    border-radius: 0.75rem;
+    display:flex;
+    flex-direction: column;
+}
+.yourChat{
+    color:#eee;
+    background-color: #053261;
+    max-width:80%;
+    border-radius: 0.5rem;
+    margin:2px;
+    padding:5px;
+    padding-left:5px;
+}
+
+#typing{
+    min-height:10px;
+    border: none;
+    background-color: transparent;
+    margin:0;
+    padding:10px;
+    color:gray;
+}
+.chatTitle{
+    color:#111;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+    text-align:center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+

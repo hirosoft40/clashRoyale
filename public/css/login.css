@@ -1,0 +1,85 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
+
+/* body {
+	font-family: 'Roboto', sans-serif;
+	background: url(../images/Background.jpg) no-repeat center center fixed;
+	background-size: cover;
+} */
+.main-section{
+	margin:0 auto;
+	margin-top: 40%;
+	padding:0;
+}
+.login {
+    background-image: url('/imgs/bg_imgs/bg_darkBlue.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+.message {
+    /* background-image: url('/imgs/bg_imgs/bg_brightBlue.jpg'); */
+    background: #4286f4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f64f59,#c471ed, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f64f59,#c471ed, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.msg{
+	width:50%;
+	margin-top:10rem;	
+}
+.modal-content{
+	background-color: #434e5a;
+	opacity: .8;
+	padding: 0 18px;
+	border-radius: 10px;
+
+}
+.user-img img{
+	height: 150px;
+	width:150px;
+}
+.user-img{
+	margin-top: -60px;
+	margin-bottom: 45px;
+}
+.form-group{
+	margin-bottom: 25px;
+	padding-top: 10px;
+
+}
+.form-group input{
+	height: 42px;
+	border-radius: 5px;
+	border: 0;
+	font-size: 18px;
+	letter-spacing: 2px;
+	padding-left: 54px;
+}
+.form-group::before{
+	font-family: "Font Awesome\ 5 Free";
+	content: "\f1fa";
+	position: absolute;
+	font-size: 22px;
+	left: 28px;
+	padding-top: 4px;
+	color: #555e60;
+}
+.form-group:last-of-type::before{
+	content: "\f023";
+}
+
+.form-input button{
+	width: 40%;
+	margin: 5px 0 25px;
+}
+.btn-warning{
+	/* font-size: 19px; */
+	border-radius: 5px;
+	padding: 7px 14px;
+    width:8rem;
+
+}
+.btn-warning:hover{
+	background-color: white;
+	border: 1px solid #daf1ff;
+}
