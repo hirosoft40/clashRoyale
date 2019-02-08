@@ -102,7 +102,7 @@ router.get('/message', (req, res) => {
 })
 
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/',
+    // successRedirect: '/',
     failureRedirect: '/auth/login',
     failureFlash: true
 }), (req, res, next) => {
@@ -112,6 +112,11 @@ router.post('/login', passport.authenticate('local', {
     } else {
         req.flash('success_msg', "Login success.")
         res.redirect('/')
+        // res.render('chat',{
+        //     username: req.user["username"],
+        //     pageID:'chat',
+        //     bodyClass:'chat'
+        // });
     }
 });
 
