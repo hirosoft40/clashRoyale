@@ -43,6 +43,15 @@
 -- ,(DEFAULT,'Elixir Cost 8',now(), now())
 -- ,(DEFAULT,'Elixir Cost 9',now(), now());
 
+INSERT INTO feelings VALUES
+     (DEFAULT,'smile', 'fa-grin-stars',now(), now())
+     ,(DEFAULT,'laugh', 'fa-laugh',now(), now())
+     ,(DEFAULT,'surprise', 'fa-surprise',now(), now())
+     ,(DEFAULT,'sad', 'fa-sad-tear',now(), now())
+     ,(DEFAULT,'tired', 'fa-tired',now(), now())
+     ,(DEFAULT,'angry', 'fa-angry',now(), now());
+
+
 -- INSERT INTO arenas VALUES
 -- (DEFAULT,'Training Camp','Training Camp',now(), now())
 -- , (DEFAULT,'Arena 1','Goblin Stadium',now(), now())
