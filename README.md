@@ -43,9 +43,6 @@ This website is for the people who started playing clash royale game and who wan
 <h4>Feedback Page: Feedback datas are stored into database</h4>
 <img src = 'screenshots/feedback.png'>
 
-<h4>Chat Page: Chat with anyone who is connected to the page.</h4>
-<img src = 'screenshots/chat.png'>
-
 <h4>Search Bar: Able to search card by name</h4>
 <img src = 'screenshots/search.png'>
 
@@ -56,50 +53,50 @@ For the querying part, I found it was much easier to write SQL first to get clea
 ## My Note on Sequelize
  <ol>
 <li>sequelize init</li>
-this will create following folders 
- |- conig
-      |- config.json // set up database information /sql light, postgres, mySQL
-|- models       
-|- migrations
+this will create following folders <br/>
+ |- conig<br/>
+      |- config.json // set up database information /sql light, postgres, mySQL<br/>
+|- models       <br/>
+|- migrations<br/>
 
 <li>create models</li>
-This is database model and needs to be completed before set up database. 
+This is database model and needs to be completed before set up database. <br/>
 // this part should define columns besides foreign keys
 <code>
-const arenas = sequelize.define('arenas', {
-    name: DataTypes.STRING,
-    arenaName: DataTypes.STRING
-  }, {});
-// This area should define foreign keys
-    arenas.associate = function(models) {
-    // associations can be defined here
-    arenas.hasMany(models.cards,{
-      onDelete:'CASCADE',
-      foreignKey:'arena_id'
-    });
-  };
+const arenas = sequelize.define('arenas', {<br/>
+    name: DataTypes.STRING,<br/>
+    arenaName: DataTypes.STRING<br/>
+  }, {});<br/>
+// This area should define foreign keys<br/>
+    arenas.associate = function(models) {<br/>
+    // associations can be defined here<br/>
+    arenas.hasMany(models.cards,{<br/>
+      onDelete:'CASCADE',<br/>
+      foreignKey:'arena_id'<br/>
+    });<br/>
+  };<br/>
 </code>
 
 <li>sync / db:migrate</li>
-There are 2 ways to create database
-
-// crate tables force:true will overwrite tables if exists
-// db.sequelize.sync({force:true}).then(()=>{
-//     app.listen(3500)
-// })
-
+There are 2 ways to create database<br/>
+<br/>
+// crate tables force:true will overwrite tables if exists<br/>
+// db.sequelize.sync({force:true}).then(()=>{<br/>
+//     app.listen(3500)<br/>
+// })<br/>
+<br/>
 <li>JOIN</li>
-Specify ininclude
+Specify include<br/>
 <code>
-include: [
-        {model:db.types,required:true}
-        , { model:db.rarities,requiredx:true}
-        , { model:db.arenas,required:true}
-        , { model:db.elixircosts, required:true
-        }]
-,where: {
-        name: {[Sequelize.Op.iLike]: `%${searchID}%`}
-        }
+include: [<br/>
+        {model:db.types,required:true}<br/>
+        , { model:db.rarities,requiredx:true}<br/>
+        , { model:db.arenas,required:true}<br/>
+        , { model:db.elixircosts, required:true<br/>
+        }]<br/>
+,where: {<br/>
+        name: {[Sequelize.Op.iLike]: `%${searchID}%`}<br/>
+        }<br/>
 </code>
 
 <img src='screenshots/sequelize.png'>
