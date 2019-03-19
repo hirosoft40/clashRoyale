@@ -1,6 +1,7 @@
-# CLASH ROYALE COMMUNITY
+# CLASH ROYALE COMMUNITY<a href='https://crcommunity.herokuapp.com/'>Live Site </a>
+
 <hr>
-<a href='https://crcommunity.herokuapp.com/'>Live Site </a>
+
 <img src = 'screenshots/all.gif'>
 <hr>
 <p>This is my first full stack project at DigitalCrafts and one of my favorite project. The main purpose of this project is to learn Node.js and Express. I got an inspiration from my son. His friends and he often talks about this game.I decided to make something that we both can enjoy and I want to provide a place that they can chat online safely.
